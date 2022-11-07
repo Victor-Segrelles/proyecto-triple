@@ -18,7 +18,6 @@ public class MinigameDrivingMovement : MonoBehaviour
     }
     void Update() {
         Vector2 position = rigidbody2d.position;
-        Debug.Log(position);
         if (Input.GetMouseButton(0)){
             lastClick=Camera.main.WorldToScreenPoint(position);
             if (Input.mousePosition.y > Camera.main.pixelHeight / 2) 
