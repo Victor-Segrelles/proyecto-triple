@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MinigameDrivingObstacle : MonoBehaviour
+public class DrivingObstacleMovement : MonoBehaviour
 {
     public float velocidad;
     // Start is called before the first frame update

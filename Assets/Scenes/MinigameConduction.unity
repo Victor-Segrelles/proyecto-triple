@@ -444,7 +444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490863967}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0003, y: 0.0016, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.2211542, y: 1.8772959, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -497,6 +497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoMax: 3
   Obstaculo: {fileID: 6954817071259818327, guid: e5011937078a0d643996adf328f95c11, type: 3}
+  Final: {fileID: 5641129751277317451, guid: ec2b79232aa102d4098bdf0808d9b678, type: 3}
+  Player: {fileID: 0}
   altura: 4
 --- !u!1001 &2400036409630403262
 PrefabInstance:
