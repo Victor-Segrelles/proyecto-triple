@@ -9,6 +9,8 @@ public class DrivingPlayerMovement : MonoBehaviour
     public float speed = 10;
     Vector2 lastClick;
     private Rigidbody2D rigidbody2d;
+    public GameObject[] Lives;
+    public int life;
 
     void Start()
     {
@@ -36,7 +38,8 @@ public class DrivingPlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
-            Debug.Log("Fue hit");
+            Destroy(Lives[life-1]);
+            life--;
         }
         if (collision.gameObject.CompareTag("Final"))
         {

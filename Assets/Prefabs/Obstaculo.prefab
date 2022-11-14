@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1658974832674112140}
   m_Layer: 0
   m_Name: Obstaculo
-  m_TagString: DrivingObstaculo
+  m_TagString: Obstaculo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e61ebcf52deec3f4fb302e7abaa1fb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 3
+  velocidad: 4
 --- !u!61 &1658974832674112140
 BoxCollider2D:
   m_ObjectHideFlags: 0

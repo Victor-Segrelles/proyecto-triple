@@ -9,14 +9,13 @@ public class DrivingObjectGenerator : MonoBehaviour
     private float tiempoFinal = 0;
     public GameObject Obstaculo;
     public GameObject Final;
-    public GameObject Player;
     public float altura = 4;
     // Start is called before the first frame update
     void Start()
     {
         GameObject obstaculoNuevo = Instantiate(Obstaculo);
         obstaculoNuevo.transform.position = transform.position + new Vector3(0, 0, 0);
-        Destroy(obstaculoNuevo, 8); //Cambiar los segundos si se modifica la velocidad
+        Destroy(obstaculoNuevo, 5); //Cambiar los segundos si se modifica la velocidad
     }
 
     // Update is called once per frame
@@ -26,7 +25,7 @@ public class DrivingObjectGenerator : MonoBehaviour
         {
             GameObject obstaculoNuevo = Instantiate(Obstaculo);
             obstaculoNuevo.transform.position = transform.position + new Vector3(0, Random.Range(-altura, altura), 0);
-            Destroy(obstaculoNuevo, 8); //Cambiar los segundos si se modifica la velocidad
+            Destroy(obstaculoNuevo, 5); //Cambiar los segundos si se modifica la velocidad
             tiempoInicial = 0;
             tiempoFinal++;
         }
@@ -35,7 +34,7 @@ public class DrivingObjectGenerator : MonoBehaviour
             tiempoInicial += Time.deltaTime;
         }
 
-        if (tiempoFinal == 10){
+        if (tiempoFinal == 20){
             GameObject obstaculoFinal = Instantiate(Final);
             obstaculoFinal.transform.position = transform.position + new Vector3(-10, 0, 0);
             tiempoFinal = 0;
