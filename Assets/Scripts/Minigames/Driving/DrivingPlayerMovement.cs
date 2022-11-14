@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class DrivingPlayerMovement : MonoBehaviour
 {
     public float speed = 10;
-    Vector2 lastClick;
+    Vector3 lastClick;
     private Rigidbody2D rigidbody2d;
     public GameObject[] Lives;
     public int life;
@@ -19,13 +20,19 @@ public class DrivingPlayerMovement : MonoBehaviour
     }
     void Update() {
         if (Input.GetMouseButton(0)){
-            lastClick = Input.mousePosition;
-            if (Input.mousePosition.y > Camera.main.pixelHeight/2)
+            lastClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Debug.Log(lastClick);
+            if (lastClick.y > transform.position.y + 0.1)
             { 
                 rigidbody2d.velocity = Vector2.up * speed;
             } 
-            else {
+            else if (lastClick.y < transform.position.y - 0.1)
+            {
                 rigidbody2d.velocity = Vector2.down * speed;
+            }
+            else
+            {
+                rigidbody2d.velocity = Vector2.up * 0;
             }
         }
         else
@@ -38,12 +45,17 @@ public class DrivingPlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
+  
             Destroy(Lives[life-1]);
             life--;
+            if (life == 0)
+            {
+                SceneManager.LoadScene("GameOver");
+            }
         }
         if (collision.gameObject.CompareTag("Final"))
         {
-            Debug.Log("Mu bien");
+            SceneManager.LoadScene("Level1"); //Uso Level1 porque aún no hay más escenas
         }
     } 
 
