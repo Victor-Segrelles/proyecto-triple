@@ -7,6 +7,6 @@ public class ChangeScene : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene("MinigameConduction");
+        SceneManager.LoadScene("MinigameDriving");
     }
 }
