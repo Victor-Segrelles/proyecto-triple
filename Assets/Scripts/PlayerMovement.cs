@@ -8,8 +8,13 @@ public class PlayerMovement : MonoBehaviour
     Vector2 lastClick;
     bool moving;
     public Rigidbody2D rigidbody2d;
+    //actualizar capa dinamicamente
+    public SpriteRenderer sprite;
+    //
     void start(){
         rigidbody2d=GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
+        sprite.sortingOrder=0;
     }
     void Update() {
         if (Input.GetMouseButtonDown(0)){
@@ -20,12 +25,20 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate(){
         if(moving && (Vector2)rigidbody2d.position !=lastClick){
             float step=speed*Time.deltaTime;
-            //transform.position=Vector2.MoveTowards(transform.position, lastClick, step);
-            ///Vector2 direction=(lastClick - transform.position).normalized;
-            //rigidbody2d.AddForce(direction);
             rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, lastClick, step));
+            actualizarCapa();
         } else {
             moving=false;
         }
+    }
+    void actualizarCapa(){
+        if(rigidbody2d.position.y<-3){
+            sprite.sortingOrder=1;
+        } else if(rigidbody2d.position.y>=-3 && rigidbody2d.position.y<-2){
+            sprite.sortingOrder=0;
+        } else {
+            sprite.sortingOrder=-1;
+        }
+        //Debug.Log(sprite.sortingOrder);
     }
 }
