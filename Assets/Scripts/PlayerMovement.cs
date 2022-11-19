@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static System.Math;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rigidbody2d;
     //actualizar capa dinamicamente
     public SpriteRenderer sprite;
-    //
+
+    //Para controlar las animaciones 
+    public Animator animator;
+
     void start(){
         rigidbody2d=GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
@@ -21,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
             lastClick=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving=true;
         }
+        animator.SetBool("walk", moving);
+        UpdateDirection();
     }
     void FixedUpdate(){
         if(moving && (Vector2)rigidbody2d.position !=lastClick){
@@ -30,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
+        animator.SetBool("walk", moving);
     }
     void actualizarCapa(){
         if(rigidbody2d.position.y<-3){
@@ -39,6 +46,24 @@ public class PlayerMovement : MonoBehaviour
         } else {
             sprite.sortingOrder=-1;
         }
-        //Debug.Log(sprite.sortingOrder);
+        //Debug.Log(sprite.sortingOrder); <>
     }
+
+
+    void UpdateDirection()
+    {
+        if (lastClick.x < rigidbody2d.position.x)
+        {
+            animator.SetInteger("direction", -1);
+        }
+        else if (lastClick.x > rigidbody2d.position.x)
+        {
+            animator.SetInteger("direction", 1);
+        }
+        //Debug.Log((Abs(lastClick.x)) - Abs(rigidbody2d.position.x));
+        //Debug.Log(Abs(lastClick.x));
+        //Debug.Log(Abs(rigidbody2d.position.x));
+
+    }
+    
 }
