@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static System.Math;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
-        animator.SetBool("walk", moving);
+        //animator.SetBool("walk", moving);
     }
     void actualizarCapa(){
         if(rigidbody2d.position.y<-3){
@@ -60,9 +60,6 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetInteger("direction", 1);
         }
-        //Debug.Log((Abs(lastClick.x)) - Abs(rigidbody2d.position.x));
-        //Debug.Log(Abs(lastClick.x));
-        //Debug.Log(Abs(rigidbody2d.position.x));
 
     }
     
