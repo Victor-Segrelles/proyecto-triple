@@ -10,7 +10,7 @@ public class ViruSpawn : MonoBehaviour
 
 
     GameObject virus;
-    Vector2 virusPos;
+    //Vector2 virusPos;
 
 
     // Start is called before the first frame update
@@ -22,28 +22,30 @@ public class ViruSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VirusDestruction();
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Transforma las unidades de las coordenadas del ratón
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Crea un rayo en la posicion del ratón
+            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+            
+            // Si el rayo detecta algo
+            if (hit.collider != null)
+            {
+                GameObject.Destroy(hit.transform.gameObject);
+                Spawn();
+            }
+        }
     }
-    void Spawn()
+
+            
+    public void Spawn()
     {
         virus = Instantiate(virusPrefab) as GameObject;
         virus.transform.position = spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position;
-        virusPos =  virus.transform.position;
+        //virusPos =  virus.transform.position;
     }
-    void VirusDestruction()
-    {
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-        //RaycastHit2D overVirus = Physics2D.Raycast(mousePos2D, Vector2.zero);
-
-
-
-        if(Input.GetMouseButtonDown(0))  // && overVirus.collider != null)
-            {
-            Destroy(virus); //overVirus.transform.gameObject);
-            Spawn();
-        }
-    }
+    
 
    
 }
