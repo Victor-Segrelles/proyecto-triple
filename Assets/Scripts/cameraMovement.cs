@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class cameraMovement : MonoBehaviour
 {
+    public int cameraSpeed;
     public GameObject player;
-    void LateUpdate(){
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+    void FixedUpdate(){
+        //transform.position = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+        transform.position = Vector3.Lerp(transform.position, new Vector3(player.transform.position.x, transform.position.y, transform.position.z), Time.deltaTime * cameraSpeed);
     }
 }
