@@ -8,7 +8,9 @@ public class PlayerMovement : MonoBehaviour
     public float speed =10f;
     Vector2 lastClick;
     bool moving;
+    //float toleranciaMovimiento=0.1f; (obsoleto)
     public Rigidbody2D rigidbody2d;
+    Vector2 lastPos;
     //actualizar capa dinamicamente
     public SpriteRenderer sprite;
 
@@ -19,23 +21,37 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2d=GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         sprite.sortingOrder=0;
+        lastPos = rigidbody2d.position;
     }
     void Update() {
-        if (Input.GetMouseButtonDown(0)){
+        if (Input.GetMouseButton(0)){
             lastClick=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving=true;
+        } else {
+            moving=false;
         }
         animator.SetBool("walk", moving);
         UpdateDirection();
     }
     void FixedUpdate(){
-        if(moving && (Vector2)rigidbody2d.position !=lastClick){
-            float step=speed*Time.deltaTime;
+
+        if(Input.GetMouseButton(0)){
+            float step=speed*Time.fixedDeltaTime;
             rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, lastClick, step));
             actualizarCapa();
-        } else {
-            moving=false;
         }
+        //rastreo de velocidad (obsoleto, simplificado)
+        /*
+        Vector2 trackVelocity = (rigidbody2d.position - lastPos) * (1/Time.fixedDeltaTime);
+        lastPos = rigidbody2d.position;
+        if((abs)trackVelocity.y<toleranciaMovimiento && (abs)trackVelocity.x<toleranciaMovimiento){
+            moving=false;
+        } else {
+            moving=true;
+        }
+        Debug.Log(trackVelocity);
+        Debug.Log(lastClick);
+        */
         //animator.SetBool("walk", moving);
     }
     void actualizarCapa(){
