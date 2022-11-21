@@ -18,9 +18,9 @@ public class ShowObject : MonoBehaviour
         else
             TheObject.SetActive(true);
         Debug.Log("Objeto creado");
-        //if (Time.timeScale != 0)
-        //    Time.timeScale = 0;
-        //else
-        //    Time.timeScale = 1;
+        if (Time.timeScale != 0)
+            Time.timeScale = 0;
+        else
+            Time.timeScale = 1;
     }
 }
