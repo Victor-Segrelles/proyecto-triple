@@ -58,7 +58,7 @@ public class DialogueManager : MonoBehaviour
         {
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
-            if (hit.collider != null && hit.collider.gameObject.name == "Next") //Esto se para ver donde se hace click, se deberia cambiar en un futuro
+            if (hit.collider != null && hit.collider.gameObject.tag != "Interfaz") //Esto se para ver donde se hace click, se deberia cambiar en un futuro
             {
                 ContinueStory();
             }
