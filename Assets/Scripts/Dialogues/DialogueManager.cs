@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
 
     private Story currentStory;
     public bool dialogueIsPlaying {get; private set;}
+    public bool choiceInDisplay = false;
     private static DialogueManager instance;
     void Awake()
     {
@@ -53,9 +54,14 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !choiceInDisplay)
         {
-            ContinueStory();
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
+            if (hit.collider != null && hit.collider.gameObject.name == "Next") //Esto se para ver donde se hace click, se deberia cambiar en un futuro
+            {
+                ContinueStory();
+            }
         }
     }
 
@@ -91,6 +97,7 @@ public class DialogueManager : MonoBehaviour
     private void DisplayChoices()
     {
         List<Choice> currentChoices = currentStory.currentChoices;
+        choiceInDisplay = true;
 
         int i = 0;
         foreach(Choice choice in currentChoices)
@@ -103,22 +110,15 @@ public class DialogueManager : MonoBehaviour
         for(int j = i; j < choices.Length; j++)
         {
             choices[j].SetActive(false);
-
+            choiceInDisplay = false;
         }
 
-        StartCoroutine(SelectFirstChoice());
-    }
-
-    private IEnumerator SelectFirstChoice()
-    {
-        EventSystem.current.SetSelectedGameObject(null);
-        yield return new WaitForEndOfFrame();
-        EventSystem.current.SetSelectedGameObject(choices[0]);
     }
 
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
 
 
