@@ -13,15 +13,18 @@ public class TalentTree : MonoBehaviour
 
     [SerializeField]
     private Talent[] unlockedByDefaultTalents;
+    //[SerializeField]
+    //private TextMeshProUGUI countText;
     void Start()
     {
         ResetTalents();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void TryMejora(Talent talent){
+        if(Globales.DINERO>0 && talent.Click()){
+            Globales.DINERO--;
+            Debug.Log(Globales.DINERO);
+        }
     }
     private void ResetTalents(){
         foreach (Talent talent in talents)
@@ -31,5 +34,8 @@ public class TalentTree : MonoBehaviour
         foreach(Talent talent in unlockedByDefaultTalents){
             talent.Unlock();
         }
+    }
+    private void UpdateMejorasText(){
+        //countText.text=
     }
 }
