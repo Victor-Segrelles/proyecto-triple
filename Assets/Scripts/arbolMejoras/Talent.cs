@@ -49,7 +49,7 @@ public class Talent : MonoBehaviour
         sprite=GetComponent<Image>();
         countText.text=$"{actual}/{max}";
     }
-    public bool Click(){
+    public virtual bool Click(){
         if (actual<max && unlocked){
             actual++;
             countText.text=$"{actual}/{max}";
