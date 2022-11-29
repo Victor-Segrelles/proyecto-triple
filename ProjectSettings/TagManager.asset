@@ -9,6 +9,8 @@ TagManager:
   - Interfaz
   - CajaTexto
   - Virus
+  - Arriba
+  - Abajo
   layers:
   - Default
   - TransparentFX

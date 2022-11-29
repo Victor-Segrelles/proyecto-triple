@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DrivingObstacleMovement : MonoBehaviour
+public class CuresMovement : MonoBehaviour
 {
     //Este código se encuentra en el prefab del objeto
-    public float velocidad;
+    private float velocidad = 2;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,9 @@ public class DrivingObstacleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Time.deltaTime * velocidad * Vector3.right;
+        if(gameObject.CompareTag("Arriba"))
+            transform.position += Time.deltaTime * velocidad * Vector3.up;
+        else
+            transform.position += Time.deltaTime * velocidad * Vector3.down;
     }
 }
