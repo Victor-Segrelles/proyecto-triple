@@ -5,7 +5,7 @@ using UnityEngine;
 public class Globales : MonoBehaviour
 {
     public static int PRESTIGE=0;
-    public static float DINERO=3000;
+    public static float DINERO=30000;
 
 
 

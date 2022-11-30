@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EconomiaI : Talent
+public class ReputacionI : Talent
 {
     public override bool Click(){
         if(base.Click()){
-            Globales.ECONOMIA+=0.1f;
-            Debug.Log(Globales.ECONOMIA);
+            Globales.REPUTACION+=0.1f;
+            Debug.Log(Globales.REPUTACION);
             return true;
         }
         return false;

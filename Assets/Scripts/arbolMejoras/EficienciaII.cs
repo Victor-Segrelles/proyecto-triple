@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EconomiaI : Talent
+public class EficienciaII : Talent
 {
     public override bool Click(){
         if(base.Click()){
-            Globales.ECONOMIA+=0.1f;
-            Debug.Log(Globales.ECONOMIA);
+            Globales.EFICIENCIA+=1.5f;
+            Debug.Log(Globales.EFICIENCIA);
             return true;
         }
         return false;
     }
     public override float coste(){
-        return 800.0f;//preecio de la mejora
+        return 1400.0f;//preecio de la mejora
     }
 }

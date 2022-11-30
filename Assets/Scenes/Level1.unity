@@ -346,8 +346,8 @@ GameObject:
   - component: {fileID: 57868572}
   - component: {fileID: 57868574}
   - component: {fileID: 57868573}
-  - component: {fileID: 57868575}
   - component: {fileID: 57868576}
+  - component: {fileID: 57868577}
   m_Layer: 0
   m_Name: Reputacion III
   m_TagString: Untagged
@@ -413,25 +413,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57868571}
   m_CullTransparentMesh: 1
---- !u!114 &57868575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57868571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 1898407441}
-  max: 1
-  unlocked: 0
-  child: {fileID: 0}
-  arrowImage: {fileID: 2053563889}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &57868576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,13 +462,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 57868575}
+          m_ObjectArgument: {fileID: 57868577}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &57868577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57868571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6e26ab7ca621e40bac9b4c60f73811, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 1898407441}
+  max: 1
+  unlocked: 0
+  child: {fileID: 0}
+  arrowImage: {fileID: 2053563889}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!4 &72370423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2791517601803994256, guid: 30cfb4bc1364b5a49ac478e866b3f4f9, type: 3}
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: f6490d1bb6c3d174a9e9bd0f5bfb1979, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06aee128d04b48a4cb555a2b2d0bd3c6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2529,18 +2529,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   talents:
   - {fileID: 2005293228}
-  - {fileID: 1438130589}
-  - {fileID: 899477380}
-  - {fileID: 2063435145}
-  - {fileID: 1598965022}
-  - {fileID: 2118842421}
-  - {fileID: 967084875}
-  - {fileID: 856719682}
-  - {fileID: 57868575}
+  - {fileID: 1438130591}
+  - {fileID: 899477382}
+  - {fileID: 2063435147}
+  - {fileID: 1598965024}
+  - {fileID: 2118842423}
+  - {fileID: 967084877}
+  - {fileID: 856719684}
+  - {fileID: 57868577}
   unlockedByDefaultTalents:
   - {fileID: 2005293228}
-  - {fileID: 1438130589}
-  - {fileID: 899477380}
+  - {fileID: 1438130591}
+  - {fileID: 899477382}
 --- !u!1 &814899552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2763,8 +2763,8 @@ GameObject:
   - component: {fileID: 856719679}
   - component: {fileID: 856719681}
   - component: {fileID: 856719680}
-  - component: {fileID: 856719682}
   - component: {fileID: 856719683}
+  - component: {fileID: 856719684}
   m_Layer: 0
   m_Name: Eficiencia III
   m_TagString: Untagged
@@ -2830,25 +2830,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856719678}
   m_CullTransparentMesh: 1
---- !u!114 &856719682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856719678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 37027759}
-  max: 1
-  unlocked: 0
-  child: {fileID: 0}
-  arrowImage: {fileID: 1728427865}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &856719683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2898,13 +2879,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 856719682}
+          m_ObjectArgument: {fileID: 856719684}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &856719684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856719678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfd720bd19e0c44c98624cc34967c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 37027759}
+  max: 1
+  unlocked: 0
+  child: {fileID: 0}
+  arrowImage: {fileID: 1728427865}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &884956926
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,8 +3096,8 @@ GameObject:
   - component: {fileID: 899477377}
   - component: {fileID: 899477379}
   - component: {fileID: 899477378}
-  - component: {fileID: 899477380}
   - component: {fileID: 899477381}
+  - component: {fileID: 899477382}
   m_Layer: 0
   m_Name: Reputacion I
   m_TagString: Untagged
@@ -3163,25 +3163,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899477376}
   m_CullTransparentMesh: 1
---- !u!114 &899477380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 899477376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 1977336966}
-  max: 5
-  unlocked: 1
-  child: {fileID: 2118842421}
-  arrowImage: {fileID: 0}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &899477381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3231,13 +3212,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 899477380}
+          m_ObjectArgument: {fileID: 899477382}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &899477382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 899477376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0cde07f70cad3f4ea4a91f9aa422141, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 1977336966}
+  max: 5
+  unlocked: 1
+  child: {fileID: 2118842423}
+  arrowImage: {fileID: 0}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &967084871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3249,8 +3249,8 @@ GameObject:
   - component: {fileID: 967084872}
   - component: {fileID: 967084874}
   - component: {fileID: 967084873}
-  - component: {fileID: 967084875}
   - component: {fileID: 967084876}
+  - component: {fileID: 967084877}
   m_Layer: 0
   m_Name: Economia III
   m_TagString: Untagged
@@ -3316,25 +3316,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 967084871}
   m_CullTransparentMesh: 1
---- !u!114 &967084875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 967084871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 2144562458}
-  max: 1
-  unlocked: 0
-  child: {fileID: 0}
-  arrowImage: {fileID: 1893347303}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &967084876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,13 +3365,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 967084875}
+          m_ObjectArgument: {fileID: 967084877}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &967084877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967084871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9ad8646f7ea054fa4729ea456f8029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 2144562458}
+  max: 1
+  unlocked: 0
+  child: {fileID: 0}
+  arrowImage: {fileID: 1893347303}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &992473056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4537,8 +4537,8 @@ GameObject:
   - component: {fileID: 1438130586}
   - component: {fileID: 1438130588}
   - component: {fileID: 1438130587}
-  - component: {fileID: 1438130589}
   - component: {fileID: 1438130590}
+  - component: {fileID: 1438130591}
   m_Layer: 0
   m_Name: Eficiencia I
   m_TagString: Untagged
@@ -4604,25 +4604,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438130585}
   m_CullTransparentMesh: 1
---- !u!114 &1438130589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1438130585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 620928095}
-  max: 5
-  unlocked: 1
-  child: {fileID: 1598965022}
-  arrowImage: {fileID: 0}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &1438130590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4672,13 +4653,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1438130589}
+          m_ObjectArgument: {fileID: 1438130591}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1438130591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438130585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2939cb844ce305c4fa9f30b813e6a68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 620928095}
+  max: 5
+  unlocked: 1
+  child: {fileID: 1598965024}
+  arrowImage: {fileID: 0}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &1453861902
 GameObject:
   m_ObjectHideFlags: 0
@@ -4902,8 +4902,8 @@ GameObject:
   - component: {fileID: 1598965019}
   - component: {fileID: 1598965021}
   - component: {fileID: 1598965020}
-  - component: {fileID: 1598965022}
   - component: {fileID: 1598965023}
+  - component: {fileID: 1598965024}
   m_Layer: 0
   m_Name: Eficiencia II
   m_TagString: Untagged
@@ -4969,25 +4969,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598965018}
   m_CullTransparentMesh: 1
---- !u!114 &1598965022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1598965018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 450007158}
-  max: 3
-  unlocked: 0
-  child: {fileID: 856719682}
-  arrowImage: {fileID: 643111772}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &1598965023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5037,13 +5018,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 1598965022}
+          m_ObjectArgument: {fileID: 1598965024}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1598965024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598965018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b86857869d0cb54488abb6791251345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 450007158}
+  max: 3
+  unlocked: 0
+  child: {fileID: 856719684}
+  arrowImage: {fileID: 643111772}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &1637507589
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,7 +6272,7 @@ MonoBehaviour:
   countText: {fileID: 707926601}
   max: 5
   unlocked: 1
-  child: {fileID: 2063435145}
+  child: {fileID: 2063435147}
   arrowImage: {fileID: 0}
   arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
   arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
@@ -6730,8 +6730,8 @@ GameObject:
   - component: {fileID: 2063435142}
   - component: {fileID: 2063435144}
   - component: {fileID: 2063435143}
-  - component: {fileID: 2063435145}
   - component: {fileID: 2063435146}
+  - component: {fileID: 2063435147}
   m_Layer: 0
   m_Name: Economia II
   m_TagString: Untagged
@@ -6797,25 +6797,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2063435141}
   m_CullTransparentMesh: 1
---- !u!114 &2063435145
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063435141}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 836108732}
-  max: 3
-  unlocked: 0
-  child: {fileID: 967084875}
-  arrowImage: {fileID: 1227172920}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &2063435146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6865,13 +6846,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2063435145}
+          m_ObjectArgument: {fileID: 2063435147}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2063435147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2063435141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7f1ebc727de8d4cbe68404adad2f1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 836108732}
+  max: 3
+  unlocked: 0
+  child: {fileID: 967084877}
+  arrowImage: {fileID: 1227172920}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &2118842417
 GameObject:
   m_ObjectHideFlags: 0
@@ -6883,8 +6883,8 @@ GameObject:
   - component: {fileID: 2118842418}
   - component: {fileID: 2118842420}
   - component: {fileID: 2118842419}
-  - component: {fileID: 2118842421}
   - component: {fileID: 2118842422}
+  - component: {fileID: 2118842423}
   m_Layer: 0
   m_Name: Reputacion II
   m_TagString: Untagged
@@ -6950,25 +6950,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118842417}
   m_CullTransparentMesh: 1
---- !u!114 &2118842421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2118842417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3854b250b6617c4fadd613a6c67ba87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 2021803075}
-  max: 3
-  unlocked: 0
-  child: {fileID: 57868575}
-  arrowImage: {fileID: 814899554}
-  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
-  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!114 &2118842422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7018,13 +6999,32 @@ MonoBehaviour:
         m_MethodName: TryMejora
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2118842421}
+          m_ObjectArgument: {fileID: 2118842423}
           m_ObjectArgumentAssemblyTypeName: Talent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2118842423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118842417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f23b66c57467b4292e4c938f1c6fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countText: {fileID: 2021803075}
+  max: 3
+  unlocked: 0
+  child: {fileID: 57868577}
+  arrowImage: {fileID: 814899554}
+  arrowSpriteLock: {fileID: 21300000, guid: 018fb9716bcae414abd75db8ccc99045, type: 3}
+  arrowSpriteUnlock: {fileID: 21300000, guid: d0cd76f4f60d18546916269927cc870c, type: 3}
 --- !u!1 &2144562456
 GameObject:
   m_ObjectHideFlags: 0
@@ -7060,7 +7060,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000000044703, y: 0.0000000076834}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1.8389, y: 1.1049}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2144562458

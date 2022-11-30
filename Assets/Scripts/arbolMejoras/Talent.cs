@@ -60,4 +60,7 @@ public class Talent : MonoBehaviour
         }
         return false;
     }
+    public virtual float coste(){
+        return 1.0f;
+    }
 }
