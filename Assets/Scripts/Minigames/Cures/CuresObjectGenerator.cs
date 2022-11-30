@@ -24,13 +24,11 @@ public class CuresObjectGenerator : MonoBehaviour
             GameObject curaNueva = Instantiate(Cures[n]);
             curaNueva.transform.position = transform.position + new Vector3(0, 0, 0);
             curaNueva.tag = "Abajo";
-            Destroy(curaNueva, 7); //Esto hay que cambiarlo ya que si lo coges no deberia desaparecer
 
             n = Random.Range(0, Cures.Length);
             GameObject curaNueva2 = Instantiate(Cures[n]);
             curaNueva2.transform.position = transform.position + new Vector3(10, -12, 0);
             curaNueva2.tag = "Arriba";
-            Destroy(curaNueva, 7); //Esto hay que cambiarlo ya que si lo coges no deberia desaparecer
 
             initialTime = 0;
         }
