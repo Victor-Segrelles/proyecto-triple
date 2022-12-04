@@ -10,11 +10,7 @@ public class ViruSpawn : MonoBehaviour
 {
     public GameObject virusPrefab;
     public Transform[] spawnPoints;
-    [SerializeField] private TextMeshProUGUI scoreText;
-    [SerializeField] private TextMeshProUGUI timeText;
-    public int scoreNum;
     private float initialTime = 0;
-    public int showTime;
 
     GameObject virus;
     //Vector2 virusPos;
@@ -22,10 +18,7 @@ public class ViruSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreNum = 0;
         Spawn();
-        ShowScore();
-        ShowTime();
     }
 
     // Update is called once per frame
@@ -34,10 +27,7 @@ public class ViruSpawn : MonoBehaviour
         if (initialTime >= 1)
         {
             initialTime = 0;
-            showTime--;
-            ShowTime();
-            if (showTime == 0)
-                SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+            VirusPointsTime.GetInstance().ShowTime();
         }
         else
         {
@@ -58,13 +48,13 @@ public class ViruSpawn : MonoBehaviour
                 {
                     GameObject.Destroy(hit.transform.gameObject);
                     Spawn();
-                    scoreNum++;
+                    VirusPointsTime.GetInstance().ChangeScore(true);
                 }
                 else
                 {
-                    scoreNum--;
+                    VirusPointsTime.GetInstance().ChangeScore(false);
                 }
-                ShowScore();
+                VirusPointsTime.GetInstance().ShowScore();
             }
         }
     }
@@ -77,15 +67,6 @@ public class ViruSpawn : MonoBehaviour
         //virusPos =  virus.transform.position;
     }
 
-    public void ShowScore()
-    {
-        scoreText.text = "Puntos: " + scoreNum;
-    }
-
-    public void ShowTime()
-    {
-        timeText.text = "Tiempo: " + showTime;
-    }
 
 
 
