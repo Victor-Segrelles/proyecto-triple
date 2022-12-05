@@ -13,7 +13,7 @@ public class Talent : MonoBehaviour
     [SerializeField]
     private int max;
 
-    private int actual;
+    public int actual;
     [SerializeField]
     private bool unlocked;
     [SerializeField]
@@ -29,7 +29,9 @@ public class Talent : MonoBehaviour
     private Sprite arrowSpriteUnlock;
 
 
-
+    public virtual void Inicializar(){
+        actual=0;
+    }
     public void Lock(){
         sprite.color=Color.gray;
         countText.color=Color.gray;
@@ -47,6 +49,7 @@ public class Talent : MonoBehaviour
     }
     private void Awake(){
         sprite=GetComponent<Image>();
+        Inicializar();
         countText.text=$"{actual}/{max}";
     }
     public virtual bool Click(){
@@ -55,6 +58,7 @@ public class Talent : MonoBehaviour
             countText.text=$"{actual}/{max}";
             if(actual==max && child!=null){
                 child.Unlock();
+                child.setUnlockState();
             }
             return true;
         }
@@ -63,4 +67,8 @@ public class Talent : MonoBehaviour
     public virtual float coste(){
         return 1.0f;
     }
+    public virtual bool estadoLock(){
+        return true;
+    }
+    public virtual void setUnlockState(){}
 }

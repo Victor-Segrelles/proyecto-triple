@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinigameRust.unity
     guid: 32d96a158e7dde043a3fab40f8f5d5ed
+  - enabled: 1
+    path: Assets/Scenes/GameInit.unity
+    guid: 42644a0e2ab49c14ba523c993ba641b0
   m_configObjects: {}

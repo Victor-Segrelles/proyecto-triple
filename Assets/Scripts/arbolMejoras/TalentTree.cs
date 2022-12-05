@@ -32,8 +32,14 @@ public class TalentTree : MonoBehaviour
             talent.Lock();
         }
         foreach(Talent talent in unlockedByDefaultTalents){
-            talent.Unlock();
+            talent.setUnlockState();
         }
+        foreach (Talent talent in talents){
+            if(talent.estadoLock()){
+                talent.Unlock();
+            }
+        }
+        //creo que sobra un bucle
     }
     private void UpdateMejorasText(){
         //countText.text=
