@@ -11,6 +11,7 @@ TagManager:
   - Virus
   - Arriba
   - Abajo
+  - Collider
   layers:
   - Default
   - TransparentFX

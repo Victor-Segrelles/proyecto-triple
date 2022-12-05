@@ -10,6 +10,7 @@ public class CuresPointsTime : MonoBehaviour
     [SerializeField] public TextMeshProUGUI timeText;
     public int scoreNum;
     public int showTime;
+    private float initialTime = 0;
     private static CuresPointsTime instance;
     // Start is called before the first frame update
     private void Awake()
@@ -25,13 +26,23 @@ public class CuresPointsTime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (initialTime >= 1)
+        {
+            initialTime = 0;
+            GetInstance().ShowTime();
+        }
+        else
+        {
+            initialTime += Time.deltaTime;
+        }
+
         if (showTime == 0)
             SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
     }
 
     public void ShowScore()
     {
-        scoreNum++;
+        scoreNum ++;
         scoreText.text = "Puntos: " + scoreNum;
     }
 

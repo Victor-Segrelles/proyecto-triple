@@ -8,11 +8,14 @@ public class CuresMovement : MonoBehaviour
 {
     //Este código se encuentra en el prefab del objeto
     private float velocidad = 2;
+    private bool inTable;
+    private bool dragged;
     Vector3 mousePos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        inTable = false;
+        dragged = false;
     }
 
     // Update is called once per frame
@@ -26,15 +29,23 @@ public class CuresMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Collider"))
+            Destroy(gameObject);
+        else
+            inTable = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        inTable = false;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.name == collision.gameObject.name)
+        if (gameObject.name == collision.gameObject.name && inTable && dragged)
         {
             Destroy(gameObject);
-
+            Destroy(collision.gameObject);
             CuresPointsTime.GetInstance().ShowScore();
         }
     }
@@ -48,5 +59,12 @@ public class CuresMovement : MonoBehaviour
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePos;
         gameObject.tag = "Untagged";
+        dragged = true;
     }
+
+    private void OnMouseUp()
+    {
+        dragged = false;
+    }
+
 }
