@@ -11,7 +11,11 @@ TagManager:
   - Virus
   - Arriba
   - Abajo
+<<<<<<< Updated upstream
   - Collider
+=======
+  - Character
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
