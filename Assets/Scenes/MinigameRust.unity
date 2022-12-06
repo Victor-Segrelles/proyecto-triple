@@ -652,8 +652,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2079983015}
   - component: {fileID: 2079983014}
-  - component: {fileID: 2079983013}
   - component: {fileID: 2079983016}
+  - component: {fileID: 2079983017}
   m_Layer: 0
   m_Name: personaje1
   m_TagString: Character
@@ -661,41 +661,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!68 &2079983013
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079983011}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -0.46036345, y: 0.33876142}
-  - {x: -0.46501803, y: -0.2564435}
-  - {x: -0.43684432, y: -0.61913294}
-  - {x: -0.37822837, y: -0.77377164}
-  - {x: -0.19301802, y: -0.913966}
-  - {x: 0.2178041, y: -0.92374563}
-  - {x: 0.46501648, y: -0.63805115}
-  - {x: 0.46767542, y: -0.18109694}
-  - {x: 0.44858804, y: 0.60616136}
-  - {x: 0.37610123, y: 0.8059422}
-  - {x: 0.13160577, y: 0.9636808}
-  - {x: -0.13321976, y: 0.96832126}
-  - {x: -0.38274395, y: 0.7964929}
-  - {x: -0.47171208, y: 0.57166}
-  - {x: -0.46204963, y: 0.32378706}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!212 &2079983014
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -784,3 +749,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!70 &2079983017
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079983011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0015455425, y: 0.004960143}
+  m_Size: {x: 0.9350865, y: 1.922763}
+  m_Direction: 0
