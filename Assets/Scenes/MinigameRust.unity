@@ -133,15 +133,15 @@ GameObject:
   m_Component:
   - component: {fileID: 60338299}
   - component: {fileID: 60338301}
-  - component: {fileID: 60338300}
   - component: {fileID: 60338302}
+  - component: {fileID: 60338303}
   m_Layer: 0
   m_Name: personaje2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &60338299
 Transform:
   m_ObjectHideFlags: 0
@@ -157,31 +157,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &60338300
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60338298}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: 0.46410048, y: 0.47701627}
-  - {x: 0.4918074, y: -0.4799469}
-  - {x: -0.473903, y: -0.46958104}
-  - {x: -0.49131352, y: 0.4514488}
-  - {x: 0.4639728, y: 0.47737715}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!212 &60338301
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -255,6 +230,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &60338303
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60338298}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0045936704, y: 0.0102363825}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.8621911, y: 0.8566905}
+  m_EdgeRadius: 0
 --- !u!1 &533498759
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,11 +638,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character:
-  - {fileID: 2079983015}
-  - {fileID: 60338299}
+  - {fileID: 2079983011}
+  - {fileID: 60338298}
   rustPrefab: {fileID: 2182858621953630178, guid: 21168ed12ece4524b99dc0584d1afc83, type: 3}
   markPrefab: {fileID: 7492554811970480463, guid: 7447898c268a4bc4ba1b53b8b36d5dc6, type: 3}
   barra: {fileID: 773150240}
+  flecha: {fileID: 533498759}
 --- !u!1 &2079983011
 GameObject:
   m_ObjectHideFlags: 0
@@ -762,6 +764,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0015455425, y: 0.004960143}
-  m_Size: {x: 0.9350865, y: 1.922763}
+  m_Offset: {x: -0.0054978617, y: -0.0036469793}
+  m_Size: {x: 0.81651616, y: 1.7678335}
   m_Direction: 0
