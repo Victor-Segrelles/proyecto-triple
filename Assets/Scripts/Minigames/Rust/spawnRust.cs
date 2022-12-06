@@ -20,7 +20,7 @@ public class spawnRust : MonoBehaviour
         // collider = GetComponent<Collider2D>();
         i = 0;
         rustPosition = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f), 0f);
-        generateRust(Random.Range(2f, 5f));
+        generateRust(Random.Range(2, 5));
     }
 
     // Update is called once per frame
@@ -40,14 +40,14 @@ public class spawnRust : MonoBehaviour
     void generateRust(float cantidad)
     {
         int i = 0;
-        while (i<cantidad)
+        while (i < cantidad)
         {
             RaycastHit2D rustHit = Physics2D.Raycast(rustPosition, Vector2.zero);
 
             // Si el rayo detecta algo 
             if (rustHit.collider != null)
             {
-                
+
                 markPosition = new Vector3(barra.transform.position.x, rustPosition.y, 0f);
 
                 RaycastHit2D markHit = Physics2D.Raycast(markPosition, Vector2.zero);
@@ -57,7 +57,8 @@ public class spawnRust : MonoBehaviour
                     Instantiate(markPrefab, markPosition, Quaternion.identity);
                     i++;
                 }
-                
+
+
 
             }
 
@@ -69,7 +70,7 @@ public class spawnRust : MonoBehaviour
 
     //bool isInsideBounds(Vector3 objectPosition, Transform objectBounds)
     //{
-        //return ((objectPosition - objectBounds.transform.position).magnitude < 2);
+    //return ((objectPosition - objectBounds.transform.position).magnitude < 2);
     //}
 }
 
