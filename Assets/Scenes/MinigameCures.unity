@@ -835,7 +835,7 @@ MonoBehaviour:
   scoreText: {fileID: 1711500863}
   timeText: {fileID: 1991557857}
   scoreNum: 0
-  showTime: 10
+  showTime: 20
 --- !u!1 &1991557855
 GameObject:
   m_ObjectHideFlags: 0
