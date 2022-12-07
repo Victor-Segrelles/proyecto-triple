@@ -11,6 +11,9 @@ public class CuresMovement : MonoBehaviour
     private bool inTable;
     private bool dragged;
     Vector3 mousePos;
+    public SpriteRenderer spriteRenderer;
+    public Sprite spriteIzq;
+    public Sprite spriteDer;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +24,18 @@ public class CuresMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gameObject.CompareTag("Arriba"))
+        if (gameObject.CompareTag("Arriba"))
+        {
             transform.position += Time.deltaTime * velocidad * Vector3.up;
+            spriteRenderer.sprite = spriteDer;
+        }
+            
         else if (gameObject.CompareTag("Abajo"))
+        {
             transform.position += Time.deltaTime * velocidad * Vector3.down;
+            spriteRenderer.sprite = spriteIzq;
+        }
+            
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -42,7 +53,7 @@ public class CuresMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (gameObject.name == collision.gameObject.name && inTable && dragged)
+        if (gameObject.name == collision.gameObject.name && gameObject.tag != collision.gameObject.tag && inTable && dragged)
         {
             Destroy(gameObject);
             Destroy(collision.gameObject);
@@ -58,7 +69,10 @@ public class CuresMovement : MonoBehaviour
     private void OnMouseDrag()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + mousePos;
-        gameObject.tag = "Untagged";
+        if(spriteRenderer.sprite == spriteDer)
+            gameObject.tag = "Derecha";
+        if(spriteRenderer.sprite == spriteIzq)
+            gameObject.tag = "Izquierda";
         dragged = true;
     }
 

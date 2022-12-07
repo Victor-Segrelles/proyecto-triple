@@ -14,6 +14,9 @@ TagManager:
   - Character
   - Marca
   - Oxido
+  - Collider
+  - Izquierda
+  - Derecha
   layers:
   - Default
   - TransparentFX
