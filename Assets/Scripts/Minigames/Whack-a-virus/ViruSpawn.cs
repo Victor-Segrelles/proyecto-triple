@@ -11,6 +11,7 @@ public class ViruSpawn : MonoBehaviour
     public GameObject virusPrefab;
     public Transform[] spawnPoints;
     private float initialTime = 0;
+    public int random;
 
     GameObject virus;
     //Vector2 virusPos;
@@ -40,22 +41,16 @@ public class ViruSpawn : MonoBehaviour
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             // Crea un rayo en la posicion del ratón
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
-            
+
             // Si el rayo detecta algo
-            if (hit.collider != null)  
-            {
+            if (hit.collider.gameObject.CompareTag("Virus"))
                 if (hit.collider.gameObject.CompareTag("Virus"))
                 {
                     GameObject.Destroy(hit.transform.gameObject);
                     Spawn();
                     VirusPointsTime.GetInstance().ChangeScore(true);
                 }
-                else
-                {
-                    VirusPointsTime.GetInstance().ChangeScore(false);
-                }
                 VirusPointsTime.GetInstance().ShowScore();
-            }
         }
     }
 
@@ -63,7 +58,9 @@ public class ViruSpawn : MonoBehaviour
     public void Spawn()
     {
         virus = Instantiate(virusPrefab) as GameObject;
-        virus.transform.position = spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position;
+        random = Random.Range(0, spawnPoints.Length);
+        virus.transform.position = spawnPoints[random].transform.position;
+        virus.transform.localScale = spawnPoints[random].transform.localScale/2;
         //virusPos =  virus.transform.position;
     }
 
