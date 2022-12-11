@@ -8,6 +8,9 @@ public class VirusPointsTime : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] public TextMeshProUGUI timeText;
+    [SerializeField] public GameObject grietas1;
+    [SerializeField] public GameObject grietas2;
+    [SerializeField] public GameObject grietas3;
     public int scoreNum;
     public int showTime;
     private static VirusPointsTime instance;
@@ -21,6 +24,9 @@ public class VirusPointsTime : MonoBehaviour
     {
         GetInstance().ShowScore();
         timeText.text = "Tiempo: " + showTime;
+        grietas1.SetActive(false);
+        grietas2.SetActive(false);
+        grietas3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -28,11 +34,26 @@ public class VirusPointsTime : MonoBehaviour
     {
         if (showTime == 0)
             SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+        if(scoreNum >= 30)
+            SceneManager.LoadScene("GameOver");
     }
 
     public void ShowScore()
     {
         scoreText.text = "Puntos: " + scoreNum;
+        if (scoreNum == 10)
+            grietas1.SetActive(true);
+        if (scoreNum == 20)
+        {
+            grietas1.SetActive(false);
+            grietas2.SetActive(true);
+        }
+        if(scoreNum == 29)
+        {
+            grietas2.SetActive(false);
+            grietas3.SetActive(true);
+        }
+
     }
 
     public void ShowTime()

@@ -60,7 +60,6 @@ public class ViruSpawn : MonoBehaviour
         virus = Instantiate(virusPrefab) as GameObject;
         random = Random.Range(0, spawnPoints.Length);
         virus.transform.position = spawnPoints[random].transform.position;
-        virus.transform.localScale = spawnPoints[random].transform.localScale/2;
         //virusPos =  virus.transform.position;
     }
 
