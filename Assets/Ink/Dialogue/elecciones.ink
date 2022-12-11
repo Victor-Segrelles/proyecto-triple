@@ -1,8 +1,10 @@
-VAR eleccion = ""
--> main
+INCLUDE globals.ink
+
+{eleccion == "": -> main | -> alreadyChosen}
+
 
 === main ===
-Buenas tardes, soy un texto de prueba.
+Buenas tardes, soy un texto de <color=\#F8FF30>prueba</color>. #speaker: Tanic #portrait: tanic_neutral 
 Elige una fruta.
     * [Manzana]
         ~ eleccion = "la manzana"
@@ -17,4 +19,9 @@ Elegiste {eleccion}.
 - "el azul": ...
              Tonto.
 }
+Bruh #speaker: Jeringuito #portrait: jeringuito_neutral
+->END
+
+==alreadyChosen==
+Ya has hecho tu elección #speaker: Tanic #portrait: tanic_neutral
 ->END

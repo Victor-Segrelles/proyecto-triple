@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 773150240}
   - component: {fileID: 773150239}
   m_Layer: 0
-  m_Name: barraVerde
+  m_Name: barra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

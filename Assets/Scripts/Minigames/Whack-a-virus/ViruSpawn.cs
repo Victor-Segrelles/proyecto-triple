@@ -43,7 +43,7 @@ public class ViruSpawn : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
 
             // Si el rayo detecta algo
-            if (hit.collider.gameObject.CompareTag("Virus"))
+            if (hit.collider!=null)
                 if (hit.collider.gameObject.CompareTag("Virus"))
                 {
                     GameObject.Destroy(hit.transform.gameObject);
