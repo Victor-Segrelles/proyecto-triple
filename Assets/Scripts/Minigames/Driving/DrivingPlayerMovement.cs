@@ -45,7 +45,7 @@ public class DrivingPlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstaculo"))
         {
-  
+            Destroy(collision.gameObject);
             Destroy(Lives[life-1]);
             life--;
             if (life == 0)
