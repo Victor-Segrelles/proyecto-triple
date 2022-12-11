@@ -30,16 +30,22 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
-        animator.SetBool("walk", moving);
-        UpdateDirection();
     }
     void FixedUpdate(){
 
-        if(Input.GetMouseButton(0)){
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButton(0)){
             float step=speed*Time.fixedDeltaTime;
             rigidbody2d.MovePosition(Vector2.MoveTowards(rigidbody2d.position, lastClick, step));
             actualizarCapa();
         }
+        animator.SetBool("walk", moving);
+        UpdateDirection();
+
         //rastreo de velocidad (obsoleto, simplificado)
         /*
         Vector2 trackVelocity = (rigidbody2d.position - lastPos) * (1/Time.fixedDeltaTime);

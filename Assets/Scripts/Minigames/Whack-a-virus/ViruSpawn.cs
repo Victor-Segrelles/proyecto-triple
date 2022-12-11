@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ViruSpawn : MonoBehaviour
 {
     public GameObject virusPrefab;
     public Transform[] spawnPoints;
-
+    private float initialTime = 0;
+    public int random;
 
     GameObject virus;
-    Vector2 virusPos;
-
+    //Vector2 virusPos;
 
     // Start is called before the first frame update
     void Start()
@@ -22,28 +25,46 @@ public class ViruSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        VirusDestruction();
-    }
-    void Spawn()
-    {
-        virus = Instantiate(virusPrefab) as GameObject;
-        virus.transform.position = spawnPoints[Random.Range(0,spawnPoints.Length)].transform.position;
-        virusPos =  virus.transform.position;
-    }
-    void VirusDestruction()
-    {
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
-        //RaycastHit2D overVirus = Physics2D.Raycast(mousePos2D, Vector2.zero);
+        if (initialTime >= 1)
+        {
+            initialTime = 0;
+            VirusPointsTime.GetInstance().ShowTime();
+        }
+        else
+        {
+            initialTime += Time.deltaTime;  
+        }
 
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Transforma las unidades de las coordenadas del ratón
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            // Crea un rayo en la posicion del ratón
+            RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
 
-
-        if(Input.GetMouseButtonDown(0))  // && overVirus.collider != null)
-            {
-            Destroy(virus); //overVirus.transform.gameObject);
-            Spawn();
+            // Si el rayo detecta algo
+            if (hit.collider!=null)
+                if (hit.collider.gameObject.CompareTag("Virus"))
+                {
+                    GameObject.Destroy(hit.transform.gameObject);
+                    Spawn();
+                    VirusPointsTime.GetInstance().ChangeScore(true);
+                }
+                VirusPointsTime.GetInstance().ShowScore();
         }
     }
 
-   
+            
+    public void Spawn()
+    {
+        virus = Instantiate(virusPrefab) as GameObject;
+        random = Random.Range(0, spawnPoints.Length);
+        virus.transform.position = spawnPoints[random].transform.position;
+        virus.transform.localScale = spawnPoints[random].transform.localScale/2;
+        //virusPos =  virus.transform.position;
+    }
+
+
+
+
 }

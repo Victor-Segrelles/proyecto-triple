@@ -6,6 +6,17 @@ TagManager:
   tags:
   - Obstaculo
   - Final
+  - Interfaz
+  - CajaTexto
+  - Virus
+  - Arriba
+  - Abajo
+  - Character
+  - Marca
+  - Oxido
+  - Collider
+  - Izquierda
+  - Derecha
   layers:
   - Default
   - TransparentFX
@@ -13,7 +24,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Deco
   - 
   - 
   - 

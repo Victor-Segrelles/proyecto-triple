@@ -17,7 +17,6 @@ public class arrowMovement : MonoBehaviour
     // Update is called once per frame <>
     void Update()
     {
-        //Debug.Log(mediaFlecha);
         if (transform.position.y>= barra.bounds.size.y/2)
         {
             direccion = Vector3.down;
