@@ -26,4 +26,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ciudad.unity
     guid: 7233430d42392d64dac3ab5e21399194
+  - enabled: 1
+    path: Assets/Scenes/Hielo.unity
+    guid: c5c43ea3162a8cf4995d05e13cdacc8f
+  - enabled: 1
+    path: Assets/Scenes/Desierto.unity
+    guid: b7c7ae15b5f6eff47aa18499e1000136
+  - enabled: 1
+    path: Assets/Scenes/Selva.unity
+    guid: bb0dce2f11cb70f42b75aa121ea9d1bd
   m_configObjects: {}

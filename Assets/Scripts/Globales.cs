@@ -39,6 +39,13 @@ public class Globales : MonoBehaviour
     public static bool UnlockedEficiencia3=false;
     public static int Reputacion3=0;
     public static bool UnlockedReputacion3=false;
+
+    //desbloqueos de zonas viaje rapido
+
+    public static bool Medieval=true;
+    public static bool Hielo=true;
+    public static bool Selva=true;
+    public static bool Desierto=true;
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */
