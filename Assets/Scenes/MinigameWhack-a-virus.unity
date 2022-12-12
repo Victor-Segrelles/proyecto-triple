@@ -4319,7 +4319,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Libera a las victimas del hielo.\n\nToca en los puntos d\xE9biles del
+  m_text: "Libera a las v\xEDctimas del hielo.\n\nToca en los puntos d\xE9biles del
     t\xE9mpano marcados con un ! para golpear el hielo. Debes dar 30 golpes antes
     de que se acabe el tiempo."
   m_isRightToLeft: 0
