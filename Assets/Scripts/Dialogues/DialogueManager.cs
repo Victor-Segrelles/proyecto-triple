@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using Ink.UnityIntegration;
@@ -16,9 +17,11 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject continueIcon;
+    [SerializeField] private GameObject portraitImage;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private GameObject fondo;
+    [SerializeField] private Sprite[] spriteArray;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -165,6 +168,7 @@ public class DialogueManager : MonoBehaviour
                     displayNameText.text = tagValue;
                     break;
                 case PORTRAIT_TAG:
+                    portraitImage.gameObject.GetComponent<Image>().sprite = spriteArray[int.Parse(tagValue)];
                     break;
                 default:
                     break;
