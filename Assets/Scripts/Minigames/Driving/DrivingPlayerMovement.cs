@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class DrivingPlayerMovement : MonoBehaviour
 {
+    [SerializeField] private GameObject GameOverPanel;
     public float speed = 10;
     Vector3 lastClick;
     private Rigidbody2D rigidbody2d;
@@ -15,6 +16,7 @@ public class DrivingPlayerMovement : MonoBehaviour
 
     void Start()
     {
+        GameOverPanel.SetActive(false);
         lastClick = Input.mousePosition;
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
@@ -48,9 +50,9 @@ public class DrivingPlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(Lives[life-1]);
             life--;
-            if (life == 0)
+            if (life <= 0)
             {
-                SceneManager.LoadScene("GameOver");
+                GameOver();
             }
         }
         if (collision.gameObject.CompareTag("Final"))
@@ -58,6 +60,12 @@ public class DrivingPlayerMovement : MonoBehaviour
             SceneManager.LoadScene("Level1"); //Uso Level1 porque aún no hay más escenas
         }
     } 
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        GameOverPanel.SetActive(true);
+    }
 
 
 }

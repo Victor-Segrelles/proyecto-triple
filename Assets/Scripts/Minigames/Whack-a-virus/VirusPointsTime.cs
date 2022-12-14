@@ -11,6 +11,7 @@ public class VirusPointsTime : MonoBehaviour
     [SerializeField] public GameObject grietas1;
     [SerializeField] public GameObject grietas2;
     [SerializeField] public GameObject grietas3;
+    [SerializeField] private GameObject GameOverPanel;
     public int scoreNum;
     public int showTime;
     private static VirusPointsTime instance;
@@ -22,6 +23,7 @@ public class VirusPointsTime : MonoBehaviour
     }
     void Start()
     {
+        GameOverPanel.SetActive(false);
         GetInstance().ShowScore();
         timeText.text = "Tiempo: " + showTime;
         grietas1.SetActive(false);
@@ -33,9 +35,9 @@ public class VirusPointsTime : MonoBehaviour
     void Update()
     {
         if (showTime == 0)
-            SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+            GameOver();
         if(scoreNum >= 30)
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Hielo"); //Game Over como ejemplo, se cambiará a la escena correspondiente
     }
 
     public void ShowScore()
@@ -74,5 +76,11 @@ public class VirusPointsTime : MonoBehaviour
     public static VirusPointsTime GetInstance()
     {
         return instance;
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        GameOverPanel.SetActive(true);
     }
 }
