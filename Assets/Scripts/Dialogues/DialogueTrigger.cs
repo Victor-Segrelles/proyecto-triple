@@ -30,6 +30,8 @@ public class DialogueTrigger : MonoBehaviour
                 if(hit.collider != null && hit.collider.gameObject.name == "Info")
                 {
                     DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+                    
+                    
                 }
             }
         }

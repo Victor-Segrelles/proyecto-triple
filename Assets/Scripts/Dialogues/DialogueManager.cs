@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 //using Ink.UnityIntegration;
 
 
@@ -93,6 +94,10 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueIsPlaying)
         {
             return;
+        }
+        else
+        {
+            ChooseMinigame();
         }
 
         if (Input.GetMouseButtonDown(0) && !choiceInDisplay)
@@ -276,6 +281,23 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
+    void ChooseMinigame()
+    {
+        string minijuego = ((Ink.Runtime.StringValue) 
+            DialogueManager.GetInstance()
+            .GetVariableState("minijuego")).value;
+
+        //SceneManager.LoadScene("Ciudad");
+
+        if (minijuego != "ninguno")
+        {
+            SceneManager.LoadScene(minijuego);
+            ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("minijuego")).value = "ninguno";
+            ExitDialogueMode();
+        }
+    }
 
     
 }

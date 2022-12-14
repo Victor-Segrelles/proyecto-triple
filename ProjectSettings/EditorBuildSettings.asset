@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Selva.unity
     guid: bb0dce2f11cb70f42b75aa121ea9d1bd
+  - enabled: 1
+    path: Assets/Scenes/MinigameWhack-a-virus.unity
+    guid: 336160e4a39ef9f4cb4ae6a949c78f66
+  - enabled: 1
+    path: Assets/Scenes/MinigameCures.unity
+    guid: 8f86f5686e91ca2489dcb23da154758e
   m_configObjects: {}
