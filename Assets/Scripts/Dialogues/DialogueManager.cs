@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-using Ink.UnityIntegration;
+//using Ink.UnityIntegration;
 
 
 
@@ -27,8 +27,8 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices;
 
 
-    [Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;
+    [Header("Load globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     private const string SPEAKER_TAG = "speaker";
 
@@ -59,12 +59,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Hay más de un Dialogue Manager y no deberia");
+            Debug.LogWarning("Hay mï¿½s de un Dialogue Manager y no deberia");
         }
         instance = this;
 
 
-        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
     public static DialogueManager GetInstance()
