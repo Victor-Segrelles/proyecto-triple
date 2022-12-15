@@ -26,7 +26,7 @@
             // single click
             if (onClick && clickCount == 1)
             {
-                SceneManager.LoadScene("Ciudad");
+                SceneManager.LoadScene("Level1");
                 Time.timeScale=1;
 
             }

@@ -52,7 +52,7 @@ public class spawnRust : MonoBehaviour
             }
             else 
             {
-                SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+                SceneManager.LoadScene("Desierto"); //Game Over como ejemplo, se cambiarï¿½ a la escena correspondiente
             }
 
         }
@@ -82,7 +82,7 @@ public class spawnRust : MonoBehaviour
 
                 RaycastHit2D markHitG = Physics2D.Raycast(markPosition, Vector2.zero);
 
-                //miro si ya había una marca en la barra para evitar que se superpongan, estén en la misma coord x o estén demasiado pegadas en la coord y
+                //miro si ya habï¿½a una marca en la barra para evitar que se superpongan, estï¿½n en la misma coord x o estï¿½n demasiado pegadas en la coord y
                 if (markHitG.collider == null)
                 {
                     Debug.Log(rustPosition);
