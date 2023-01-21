@@ -37,7 +37,7 @@ public class CuresPointsTime : MonoBehaviour
         }
 
         if (showTime == 0)
-            SceneManager.LoadScene("Selva"); //Game Over como ejemplo, se cambiar� a la escena correspondiente
+            SceneManager.LoadScene("Selva"); //Game Over como ejemplo, se cambiará a la escena correspondiente
     }
 
     public void ShowScore()
@@ -51,6 +51,7 @@ public class CuresPointsTime : MonoBehaviour
         showTime--;
         timeText.text = "Tiempo: " + showTime;
     }
+
 
     public static CuresPointsTime GetInstance()
     {
