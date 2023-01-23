@@ -14,7 +14,7 @@ public class Globales : MonoBehaviour
     public static float ECONOMIA=1;
     //mejora resultados (dando mas prestigio)
     public static float REPUTACION=1;
-    //mejora resultados (en generan) y reduce gastos de materiales
+    //mejora resultados (en general) y reduce gastos de materiales
     public static float EFICIENCIA=1;
 
 
@@ -42,37 +42,16 @@ public class Globales : MonoBehaviour
 
     //desbloqueos de zonas viaje rapido
 
-<<<<<<< Updated upstream
     public static bool Medieval=true;
     public static bool Hielo=true;
     public static bool Selva=true;
     public static bool Desierto=true;
-=======
-    public static bool Medieval=false;
-    public static bool Hielo=false;
-    public static bool Selva=false;
-    public static bool Desierto=false;
 
     //recursos
     public static int madera=0;
     public static int suministros=0;
     public static int vacunas=0;
     public static int tiritas=0;
-
-    //ink
-    public static string partir="true";
-    public static string clinicaDonado="true";
-    //public static string partir="";
-    //public static string partir="";
-
-    //historio
-    public static bool tiendaCinematica=true;
-    public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
-    //public static bool encuentroTanic=true;
-    //public static bool encuentroHoye=true;
-    public static Vector3 lastPosition = new Vector3(0,-3,0);
-
->>>>>>> Stashed changes
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */

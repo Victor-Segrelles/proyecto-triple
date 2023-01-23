@@ -20,12 +20,7 @@ public class PuertaTienda : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
             if(hit.collider != null && hit.collider.gameObject == door)
             {
-                Globales.lastPosition = this.transform.position;
-                if(Globales.tiendaCinematica){
-                    SceneManager.LoadScene("TiendaCinematica");
-                } else {
-                    SceneManager.LoadScene("Tienda");
-                }
+                SceneManager.LoadScene("Tienda");
             }
         }
 
