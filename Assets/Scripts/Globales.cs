@@ -14,7 +14,7 @@ public class Globales : MonoBehaviour
     public static float ECONOMIA=1;
     //mejora resultados (dando mas prestigio)
     public static float REPUTACION=1;
-    //mejora resultados (en generan) y reduce gastos de materiales
+    //mejora resultados (en general) y reduce gastos de materiales
     public static float EFICIENCIA=1;
 
 
@@ -46,6 +46,12 @@ public class Globales : MonoBehaviour
     public static bool Hielo=true;
     public static bool Selva=true;
     public static bool Desierto=true;
+
+    //recursos
+    public static int madera=0;
+    public static int suministros=0;
+    public static int vacunas=0;
+    public static int tiritas=0;
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */
