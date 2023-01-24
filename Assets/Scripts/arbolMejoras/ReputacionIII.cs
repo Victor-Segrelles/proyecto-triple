@@ -9,7 +9,7 @@ public class ReputacionIII : Talent
     }
     public override bool Click(){
         if(base.Click()){
-            Globales.REPUTACION+=10.5f;
+            Globales.REPUTACION+=2.5f;
             Debug.Log(Globales.REPUTACION);
             Globales.Reputacion3++;
             return true;

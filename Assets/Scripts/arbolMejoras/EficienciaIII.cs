@@ -9,7 +9,7 @@ public class EficienciaIII : Talent
     }
     public override bool Click(){
         if(base.Click()){
-            Globales.EFICIENCIA+=10.5f;
+            Globales.EFICIENCIA+=1.5f;
             Debug.Log(Globales.EFICIENCIA);
             Globales.Eficiencia3++;
             return true;
