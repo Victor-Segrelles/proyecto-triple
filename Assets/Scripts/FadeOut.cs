@@ -2,45 +2,49 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using TMPro;
 
-public class FadeToBlack : MonoBehaviour
+public class FadeOut : MonoBehaviour
 {
     public GameObject blackScreen;
-    int fspeed = 1;
+    public TextMeshProUGUI text1;
+    public TextMeshProUGUI text2;
+    float fspeed = 0.5f;
     Color objectColor;
-    float fadeAmount = 0;
+    float fadeAmount = 1;
+    float fadeText = 0;
     bool startFading;
-    
     // Start is called before the first frame update
     void Start()
     {
-        blackScreen.SetActive(false);
+        startFading = false;
+        blackScreen.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(startFading)
+        FadeText();
+        if (startFading)
         {
-            fadeAmount = objectColor.a + fspeed * Time.deltaTime;
+            fadeAmount -= fspeed * Time.deltaTime;
             Debug.Log(fadeAmount);
 
             objectColor = new Color(0, 0, 0, fadeAmount);
             blackScreen.GetComponent<Image>().color = objectColor;
-            if (fadeAmount > 1)
+            if (fadeAmount < 0)
             {
                 startFading = false;
-                SceneManager.LoadScene("Clinica");
             }
-                
         }
-
     }
 
-    public void FadeBlack()
+    void FadeText()
     {
-        blackScreen.SetActive(true);
-        startFading = true;
+        fadeText += fspeed * Time.deltaTime;
+        Debug.Log(fadeText);
+
+        objectColor = new Color(255f, 255f, 255f, fadeText);
+        text1.color = objectColor;
     }
 }
