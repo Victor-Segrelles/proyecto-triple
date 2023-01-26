@@ -28,6 +28,7 @@ public class FadeToBlack : MonoBehaviour
 
             objectColor = new Color(0, 0, 0, fadeAmount);
             blackScreen.GetComponent<Image>().color = objectColor;
+
             if (fadeAmount > 1)
             {
                 startFading = false;
