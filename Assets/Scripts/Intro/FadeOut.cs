@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class FadeOut : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class FadeOut : MonoBehaviour
     bool startFading;
     bool textchange;
     bool finished;
-    bool continuacion;
+    int continuacion;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +29,7 @@ public class FadeOut : MonoBehaviour
         blackScreen.SetActive(true);
         textchange = false;
         finished = false;
-        continuacion = false;
+        continuacion = 0;
     }
 
     // Update is called once per frame
@@ -36,6 +37,10 @@ public class FadeOut : MonoBehaviour
     {
         if (startFading)
         {
+            if (continuacion == 2)
+            {
+                SceneManager.LoadScene("Trono");
+            }
             fadeAmount -= fspeed * Time.deltaTime;
 
             objectColor = new Color(0, 0, 0, fadeAmount);
@@ -47,13 +52,14 @@ public class FadeOut : MonoBehaviour
             {
                 startFading = false;
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
+ 
             }
         }
         else
         {
             if(!finished)
                 FadeText();
-            else if (!DialogueManager.GetInstance().DialoguePlaying() && !continuacion)
+            else if (!DialogueManager.GetInstance().DialoguePlaying())
             {
                 fadeAmount += fspeed * Time.deltaTime;
 
@@ -64,11 +70,22 @@ public class FadeOut : MonoBehaviour
                     startFading = false;
                     textchange = false;
                     finished = false;
-                    continuacion = true;
-                    text1.text = "...con un rey que no se preocupa por sus ciudadanos";
-                    text2.text = "y pone los precios de los servicios primarios por las nubes";
-                    inkJSON = inkJSONcont;
+                    if (continuacion == 0)
+                    {
+                        inkJSON = inkJSONcont;
+                        text1.text = "...con un rey que no se preocupa por sus ciudadanos";
+                        text2.text = "y pone los precios de los servicios primarios por las nubes.";
+                        continuacion = 1;
+                    }
+                    else if (continuacion == 1)
+                    {
+                        text1.text = "Y así, Jeringuito se dirigió a la sala del trono para su audiencia con el rey.";
+                        text2.text = "";
+                        continuacion = 2;
+                    }
+
                 }
+
             }
         } 
             
