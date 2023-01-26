@@ -6,9 +6,12 @@ using TMPro;
 
 public class FadeOut : MonoBehaviour
 {
+    //ESTE ES EL CÓDIGO DE LA INTRO, SE QUEDA COMO FADE OUT, ME DA IGUAL
     public GameObject blackScreen;
     public TextMeshProUGUI text1;
     public TextMeshProUGUI text2;
+    public TextAsset inkJSON;
+    public TextAsset inkJSONcont; //Esto está fatal pero no hay tiempo para hacer código bonito
     float fspeed = 0.5f;
     Color objectColor;
     float fadeAmount = 1;
@@ -16,6 +19,7 @@ public class FadeOut : MonoBehaviour
     bool startFading;
     bool textchange;
     bool finished;
+    bool continuacion;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class FadeOut : MonoBehaviour
         blackScreen.SetActive(true);
         textchange = false;
         finished = false;
+        continuacion = false;
     }
 
     // Update is called once per frame
@@ -32,7 +37,6 @@ public class FadeOut : MonoBehaviour
         if (startFading)
         {
             fadeAmount -= fspeed * Time.deltaTime;
-            Debug.Log(fadeAmount);
 
             objectColor = new Color(0, 0, 0, fadeAmount);
             blackScreen.GetComponent<Image>().color = objectColor;
@@ -42,12 +46,30 @@ public class FadeOut : MonoBehaviour
             if (fadeAmount < 0)
             {
                 startFading = false;
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }
         else
         {
             if(!finished)
                 FadeText();
+            else if (!DialogueManager.GetInstance().DialoguePlaying() && !continuacion)
+            {
+                fadeAmount += fspeed * Time.deltaTime;
+
+                objectColor = new Color(0, 0, 0, fadeAmount);
+                blackScreen.GetComponent<Image>().color = objectColor;
+                if (fadeAmount > 1)
+                {
+                    startFading = false;
+                    textchange = false;
+                    finished = false;
+                    continuacion = true;
+                    text1.text = "...con un rey que no se preocupa por sus ciudadanos";
+                    text2.text = "y pone los precios de los servicios primarios por las nubes";
+                    inkJSON = inkJSONcont;
+                }
+            }
         } 
             
     }
@@ -55,7 +77,6 @@ public class FadeOut : MonoBehaviour
     void FadeText()
     {
         fadeText += fspeed * Time.deltaTime;
-        Debug.Log(fadeText);
 
         objectColor = new Color(255f, 255f, 255f, fadeText);
         if(!textchange)
@@ -75,4 +96,6 @@ public class FadeOut : MonoBehaviour
                 
         }
     }
+
+   
 }
