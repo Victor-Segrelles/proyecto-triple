@@ -261,13 +261,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (canContinueToNextLine)
         {
+            Debug.Log("entra");
             currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
         }
        
     }
-
-
 
 
     public Ink.Runtime.Object GetVariableState(string variableName)
@@ -297,6 +296,11 @@ public class DialogueManager : MonoBehaviour
             .GetVariableState("minijuego")).value = "ninguno";
             ExitDialogueMode();
         }
+    }
+
+    public bool DialoguePlaying()
+    {
+        return dialogueIsPlaying;
     }
 
     
