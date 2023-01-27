@@ -13,6 +13,7 @@ public class DrivingPlayerMovement : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public GameObject[] Lives;
     public int life;
+    private int originlife;
     private string destino = DialogueManager.GetInstance().GetDestino();
 
     void Start()
@@ -20,6 +21,7 @@ public class DrivingPlayerMovement : MonoBehaviour
         GameOverPanel.SetActive(false);
         lastClick = Input.mousePosition;
         rigidbody2d = GetComponent<Rigidbody2D>();
+        originlife=life;
     }
     void Update() {
         if (Input.GetMouseButton(0)){
@@ -58,7 +60,22 @@ public class DrivingPlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Final"))
         {
-            SceneManager.LoadScene(destino); //Uso Level1 porque aún no hay más escenas
+            if(destino=="Level1"){
+                Globales.Medieval=true;
+            } else if (destino=="Desierto"){
+                Globales.Desierto=true;
+            } else if (destino=="Hielo"){
+                Globales.Hielo=true;
+            } else if (destino=="Selva"){
+                Globales.Selva=true;
+            }
+            Globales.PRESTIGE+=(10+life*40);//formula del prestigio provisional
+            if(Globales.DINERO>(originlife-life)*50){
+                Globales.DINERO-=(originlife-life)*50;
+            } else {
+                Globales.DINERO-=Globales.DINERO;
+            }
+            SceneManager.LoadScene(destino); //Uso Level1 porque aï¿½n no hay mï¿½s escenas
         }
     } 
 

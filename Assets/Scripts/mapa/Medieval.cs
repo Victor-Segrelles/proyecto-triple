@@ -27,7 +27,7 @@
             if (onClick && clickCount == 1)
             {
                 if(Globales.Medieval){
-                    SceneManager.LoadScene("Ciudad");
+                    SceneManager.LoadScene("Level1");
                     Time.timeScale=1;
                 }
 

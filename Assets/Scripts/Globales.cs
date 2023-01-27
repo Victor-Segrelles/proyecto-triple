@@ -5,7 +5,7 @@ using UnityEngine;
 public class Globales : MonoBehaviour
 {
     public static int PRESTIGE=0;
-    public static float DINERO=30000;
+    public static float DINERO=16000;
 
 
 
@@ -42,10 +42,10 @@ public class Globales : MonoBehaviour
 
     //desbloqueos de zonas viaje rapido
 
-    public static bool Medieval=true;
-    public static bool Hielo=true;
-    public static bool Selva=true;
-    public static bool Desierto=true;
+    public static bool Medieval=false;
+    public static bool Hielo=false;
+    public static bool Selva=false;
+    public static bool Desierto=false;
 
     //recursos
     public static int madera=0;
