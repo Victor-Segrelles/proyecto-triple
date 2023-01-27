@@ -28,7 +28,7 @@
             {
 <<<<<<< Updated upstream
                 if(Globales.Medieval){
-                    SceneManager.LoadScene("Ciudad");
+                    SceneManager.LoadScene("Level1");
                     Time.timeScale=1;
                 }
 
