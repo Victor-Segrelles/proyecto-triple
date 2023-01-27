@@ -298,6 +298,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public string GetDestino()
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("destino")).value;
+    }
+
     public bool DialoguePlaying()
     {
         return dialogueIsPlaying;

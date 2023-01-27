@@ -7,6 +7,7 @@ INCLUDE ../globals.ink
 Hola, ¿Quieres iniciar el minijuego de navegar?
     * [Si]
         ~ minijuego = "MinigameDriving"
+        ~ destino = "Desierto"
         ->DONE
         
     * [No]

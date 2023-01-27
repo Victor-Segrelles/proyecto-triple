@@ -13,6 +13,7 @@ public class DrivingPlayerMovement : MonoBehaviour
     private Rigidbody2D rigidbody2d;
     public GameObject[] Lives;
     public int life;
+    private string destino = DialogueManager.GetInstance().GetDestino();
 
     void Start()
     {
@@ -57,7 +58,7 @@ public class DrivingPlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Final"))
         {
-            SceneManager.LoadScene("Level1"); //Uso Level1 porque aún no hay más escenas
+            SceneManager.LoadScene(destino); //Uso Level1 porque aún no hay más escenas
         }
     } 
 
