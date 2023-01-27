@@ -56,4 +56,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Trono.unity
     guid: 2063ae98947c9bc44972af68a43fcb52
+  - enabled: 1
+    path: Assets/Scenes/CiudadCinematica.unity
+    guid: 1e6586fdd34035245a85f625afe8c166
+  - enabled: 1
+    path: Assets/Scenes/PuertoCinematica.unity
+    guid: f97b84c3cfde4154aac22a0ef3ff0db2
+  - enabled: 1
+    path: Assets/Scenes/PuebloCinematica.unity
+    guid: 2ad0c7ea4e00b644c8bacfa0cae4d6ef
+  - enabled: 1
+    path: Assets/Scenes/Pueblo2Cinematica.unity
+    guid: 7371d9f08ae15ed45b7fd4a48ee57c7a
   m_configObjects: {}
