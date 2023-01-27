@@ -61,7 +61,7 @@ public class DrivingPlayerMovement : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Final"))
         {
-            if(destino=="Level1"){
+            if(destino=="PuebloCinematica"){
                 Globales.Medieval=true;
             } else if (destino=="Desierto"){
                 Globales.Desierto=true;
@@ -70,9 +70,9 @@ public class DrivingPlayerMovement : MonoBehaviour
             } else if (destino=="Selva"){
                 Globales.Selva=true;
             }
-            Globales.PRESTIGE+=(10+life*40);//formula del prestigio provisional
-            if(Globales.DINERO>(originlife-life)*50){
-                Globales.DINERO-=(originlife-life)*50;
+            Globales.PRESTIGE+=(int)((10+life*40)*Globales.REPUTACION);//formula del prestigio provisional
+            if(Globales.DINERO>(originlife-life)*(100-10*Globales.EFICIENCIA)){
+                Globales.DINERO-=(originlife-life)*(100-10*Globales.EFICIENCIA);
             } else {
                 Globales.DINERO-=Globales.DINERO;
             }

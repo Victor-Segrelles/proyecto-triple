@@ -33,12 +33,14 @@ public class TiendaManager : MonoBehaviour
     private TextMeshProUGUI precioSuministro;
     [SerializeField]
     private TextMeshProUGUI textSubtotal;
+    [SerializeField]
+    private TextMeshProUGUI textDinero;
     private void Awake(){
         updatetexts();
-        precioMadera.text=$"{pveMadera}$";
-        precioVacuna.text=$"{pveVacuna}$";
-        precioTirita.text=$"{pveTirita}$";
-        precioSuministro.text=$"{pveSuministro}$";
+        precioMadera.text=$"{pveMadera}";
+        precioVacuna.text=$"{pveVacuna}";
+        precioTirita.text=$"{pveTirita}";
+        precioSuministro.text=$"{pveSuministro}";
     }
     public void OnMaderaPlus(){
         madera++;
@@ -87,7 +89,8 @@ public class TiendaManager : MonoBehaviour
         tiritaText.text=$"{tiritas}";
         suministroText.text=$"{suministros}";
         subtotal=madera*pveMadera+vacunas*pveVacuna+tiritas*pveTirita+suministros*pveSuministro;
-        textSubtotal.text=$"{subtotal}";
+        textSubtotal.text=$"Subtotal: {subtotal}";
+        textDinero.text=$"Fondos: {Globales.DINERO}";
     }
     public void OnCompra(){
         if(subtotal<=Globales.DINERO){

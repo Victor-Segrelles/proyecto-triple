@@ -26,13 +26,9 @@
             // single click
             if (onClick && clickCount == 1)
             {
-                if(Globales.Medieval){
-                    SceneManager.LoadScene("Level1");
-                    Time.timeScale=1;
-                }
-
+                SceneManager.LoadScene("Ciudad");
+                Time.timeScale=1;
             }
-       
             // double click
             if (onDoubleClick && clickCount == 2)
             {
