@@ -24,6 +24,7 @@ public class DrivingPlayerMovement : MonoBehaviour
         originlife=life;
     }
     void Update() {
+        Debug.Log(destino);
         if (Input.GetMouseButton(0)){
             lastClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(lastClick);
