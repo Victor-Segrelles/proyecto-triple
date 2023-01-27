@@ -52,6 +52,7 @@ public class Globales : MonoBehaviour
     public static int suministros=0;
     public static int vacunas=0;
     public static int tiritas=0;
+
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */

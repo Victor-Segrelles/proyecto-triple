@@ -1017,7 +1017,7 @@ MonoBehaviour:
   blackScreen: {fileID: 1130731010}
   text1: {fileID: 165911626}
   text2: {fileID: 1190619724}
-  inkJSON: {fileID: 4900000, guid: 4dee924b2674d96499a46cdebf909fc7, type: 3}
+  inkJSON: {fileID: 4900000, guid: e11d3bb5dceffc5479707cc396d98a99, type: 3}
   escena: Level1
 --- !u!1 &1820819895
 GameObject:
@@ -1076,7 +1076,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 210b43dcfbc6c524caf2d602b9e549fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

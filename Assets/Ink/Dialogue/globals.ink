@@ -3,3 +3,4 @@ VAR destino = ""
 
 
 VAR eleccion = ""
+VAR partir = 0
