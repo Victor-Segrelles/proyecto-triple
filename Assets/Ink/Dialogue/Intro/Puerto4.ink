@@ -2,7 +2,7 @@ INCLUDE ../globals.ink
 ->main
 
 ===main===
-~ destino = "PuebloCinematica"
+~destino = "PuebloCinematica"
 #speaker: Jeringuito #portrait: 0
 Ay, que ya no sale humo. 
 Me casaría contigo ahora mismo.

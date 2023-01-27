@@ -68,4 +68,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pueblo2Cinematica.unity
     guid: 7371d9f08ae15ed45b7fd4a48ee57c7a
+  - enabled: 1
+    path: Assets/Scenes/Pueblo3Cinematica.unity
+    guid: cffe7796f337978478c31f0d1dadbb6a
+  - enabled: 1
+    path: Assets/Scenes/PostOxidoCinematica.unity
+    guid: 0756c15aa0b557d40803778e67b3cd32
+  - enabled: 1
+    path: Assets/Scenes/ViajeCinematica.unity
+    guid: b4a248341fc7d274593169fe6de8f8dd
+  - enabled: 1
+    path: Assets/Scenes/Puerto2Cinematica.unity
+    guid: 44ffc4f39fc76944b8bf0021e83fb8bc
   m_configObjects: {}
