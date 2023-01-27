@@ -13,7 +13,7 @@ using UnityEngine.SceneManagement;
 public class DialogueManager : MonoBehaviour
 {
     [Header("Params")]
-    [SerializeField] private float typingSpeed = 0.04f;
+    [SerializeField] private float typingSpeed = 0.04f; //Esto estaba en 0.04f si está diferente es que lo he cambiado para ver más rapido las cinemáticas
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;

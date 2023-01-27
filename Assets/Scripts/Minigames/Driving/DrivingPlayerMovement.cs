@@ -22,6 +22,7 @@ public class DrivingPlayerMovement : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
     }
     void Update() {
+        Debug.Log(destino);
         if (Input.GetMouseButton(0)){
             lastClick = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(lastClick);
