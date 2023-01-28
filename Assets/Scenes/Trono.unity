@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7159712077286341733, guid: 0abae9c16f53fc74faeb1dbfcc9884f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12
+      value: -10.32
       objectReference: {fileID: 0}
     - target: {fileID: 7159712077286341733, guid: 0abae9c16f53fc74faeb1dbfcc9884f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -210,7 +210,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: f9bff5eb5b51e00468470d2e73f0c716, type: 3}
   inkJSON2: {fileID: 4900000, guid: 5056f48c5633e8d459e191d4e80e3a4e, type: 3}
   text1: {fileID: 1981679582}
-  speed: 10
+  text2: {fileID: 0}
+  speed: 15
   rigidbody2d: {fileID: 1260277785}
   animator: {fileID: 1260277784}
 --- !u!95 &1260277784 stripped

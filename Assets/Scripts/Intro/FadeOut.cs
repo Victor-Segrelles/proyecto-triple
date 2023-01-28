@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class FadeOut : MonoBehaviour
 {
-    //ESTE ES EL CÓDIGO DE LA INTRO, SE QUEDA COMO FADE OUT, ME DA IGUAL
+    //ESTE ES EL Cï¿½DIGO DE LA INTRO, SE QUEDA COMO FADE OUT, ME DA IGUAL
     public GameObject blackScreen;
     public TextMeshProUGUI text1;
     public TextMeshProUGUI text2;
     public TextAsset inkJSON;
-    public TextAsset inkJSONcont; //Esto está fatal pero no hay tiempo para hacer código bonito
+    public TextAsset inkJSONcont; //Esto estï¿½ fatal pero no hay tiempo para hacer cï¿½digo bonito
     float fspeed = 0.5f;
     Color objectColor;
     float fadeAmount = 1;
@@ -39,6 +39,11 @@ public class FadeOut : MonoBehaviour
         {
             if (continuacion == 2)
             {
+                //get set de globales
+                Globales.clinicaDonado=DialogueManager.GetInstance().GetUniversal("clinicaDonado");
+                if(Globales.clinicaDonado=="true"){
+                    Globales.DINERO-=10000.0f;
+                }
                 SceneManager.LoadScene("Trono");
             }
             fadeAmount -= fspeed * Time.deltaTime;
@@ -79,7 +84,7 @@ public class FadeOut : MonoBehaviour
                     }
                     else if (continuacion == 1)
                     {
-                        text1.text = "Y así, Jeringuito se dirigió a la sala del trono para su audiencia con el rey.";
+                        text1.text = "Y asï¿½, Jeringuito se dirigiï¿½ a la sala del trono para su audiencia con el rey.";
                         text2.text = "";
                         continuacion = 2;
                     }

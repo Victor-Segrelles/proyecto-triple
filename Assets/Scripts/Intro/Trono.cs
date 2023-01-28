@@ -12,7 +12,7 @@ public class Trono : MonoBehaviour
     public TextAsset inkJSON2;
     public TextMeshProUGUI text1;
     public TextMeshProUGUI text2;
-    public float speed = 8f;
+    public float speed = 120.0f;
     float fspeed = 0.5f;
     Color objectColor;
     float fadeAmount = 1;
@@ -87,7 +87,7 @@ public class Trono : MonoBehaviour
             }
             if (fadeText > 1)
             {
-                SceneManager.LoadScene("Ciudad");
+                SceneManager.LoadScene("CiudadCinematica");
             }
         }
 

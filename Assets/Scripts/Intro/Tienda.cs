@@ -18,6 +18,7 @@ public class Tienda : MonoBehaviour
     {
         startFading = true;
         blackScreen.SetActive(true);
+        Globales.tiendaCinematica=false;
     }
 
     // Update is called once per frame
