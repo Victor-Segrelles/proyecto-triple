@@ -61,6 +61,10 @@ public class Globales : MonoBehaviour
 
     //historio
     public static bool tiendaCinematica=true;
+    public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
+    //public static bool encuentroTanic=true;
+    //public static bool encuentroHoye=true;
+    public static Vector3 lastPosition = new Vector3(0,-3,0);
 
 }
 /* MANUAL DE USO 

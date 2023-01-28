@@ -27,6 +27,7 @@
             if (onClick && clickCount == 1)
             {
                 if(Globales.Selva){
+                    Globales.lastPosition.Set(0,-3,0);
                     SceneManager.LoadScene("Selva");
                     Time.timeScale=1;
                 }

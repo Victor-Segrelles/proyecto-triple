@@ -27,6 +27,7 @@
             if (onClick && clickCount == 1)
             {
                 if(Globales.Hielo){
+                    Globales.lastPosition.Set(0,-3,0);
                     SceneManager.LoadScene("Hielo");
                     Time.timeScale=1;
                 }

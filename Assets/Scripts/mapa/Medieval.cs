@@ -26,6 +26,7 @@
             // single click
             if (onClick && clickCount == 1)
             {
+                Globales.lastPosition.Set(0,-3,0);
                 SceneManager.LoadScene("Ciudad");
                 Time.timeScale=1;
             }

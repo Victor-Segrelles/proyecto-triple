@@ -17,11 +17,12 @@ public class PlayerMovement : MonoBehaviour
     //Para controlar las animaciones 
     public Animator animator;
 
-    void start(){
+    void Start(){
         rigidbody2d=GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         sprite.sortingOrder=0;
         lastPos = rigidbody2d.position;
+        rigidbody2d.position=Globales.lastPosition;
     }
     void Update() {
         if (Input.GetMouseButton(0)){
@@ -30,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
-        Debug.Log(Globales.clinicaDonado);
+        Debug.Log(Globales.lastPosition);
     }
     void FixedUpdate(){
 

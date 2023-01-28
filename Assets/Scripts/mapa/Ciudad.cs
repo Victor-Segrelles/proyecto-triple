@@ -27,6 +27,7 @@
             if (onClick && clickCount == 1)
             {
                 if(Globales.Medieval){
+                    Globales.lastPosition.Set(0,-3,0);
                     SceneManager.LoadScene("Level1");
                     Time.timeScale=1;
                 }
