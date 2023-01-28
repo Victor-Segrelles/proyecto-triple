@@ -13,12 +13,12 @@ Vengo a ayudar.
 ¿“Bártulos Sin Fronteras”? No lo había oído nunca.
 #speaker: Jeringuito #portrait: 0
 Ya bueno, la fundé hace poco. 
-#speaker: Vendi #portrait: 1
+#speaker: Vendi #portrait: 2
 ¿Oh? ¿Y vienes a ayudar? Te lo agradezco mucho. Soy Vendi.
 #speaker: Jeringuito #portrait: 0
 Encantado. 
 Dime…¿qué puedo hacer?
-#speaker: Vendi #portrait: 1
+#speaker: Vendi #portrait: 2
 Bueno…necesitaríamos materiales de construcción. Tocaría comprar la mayoría, pero la gente del pueblo podría tener algo que sirva de ayuda.
 Aunque con la subida de los impuestos dudo que te lo den así como así…
 También haría falta alguien que supiera reparar edificios. 
