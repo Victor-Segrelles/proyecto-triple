@@ -62,6 +62,8 @@ public class Globales : MonoBehaviour
     //historio
     public static bool tiendaCinematica=true;
 
+    
+
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */
