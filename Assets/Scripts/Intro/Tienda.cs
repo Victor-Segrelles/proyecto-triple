@@ -36,5 +36,26 @@ public class Tienda : MonoBehaviour
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }
+        else if (!DialogueManager.GetInstance().DialoguePlaying())
+        {
+            fadeAmount += fspeed * Time.deltaTime;
+
+            objectColor = new Color(0, 0, 0, fadeAmount);
+            blackScreen.GetComponent<Image>().color = objectColor;
+            if (fadeAmount > 1)
+            {
+                if(Globales.clinicaDonado=="true"){
+                    Globales.DINERO-=2500.0f;
+                } else {
+                    Globales.DINERO-=15000.0f;
+                }
+                Globales.madera+=3;
+                Globales.vacunas+=2;
+                Globales.tiritas+=4;
+                Globales.suministros+=4;
+                SceneManager.LoadScene("Ciudad");
+            }
+
+        }
     }
 }

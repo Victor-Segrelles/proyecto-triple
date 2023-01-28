@@ -4,4 +4,4 @@ VAR destino = ""
 
 VAR eleccion = ""
 VAR partir = "true"
-VAR clinicaDonado =""
+VAR clinicaDonado = ""

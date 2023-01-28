@@ -33,9 +33,9 @@ Pues no me lo había planteado ¡¿qué hago yo ahora?!
 Mhmmm…da la casualidad que tengo un barco en el puerto que era de mi padre y lleva años acumulando polvo  ¿Estarías dispuesto a comprármelo?
 #speaker: Jeringuito #portrait: 0
 ¡Ay madre! Y yo que pensaba controlar mis gastos ahora que ya no tengo trabajo. Venga, de perdidos al río ¿por cuánto me venderías el barco?
-{ eleccion:
--"0": ->elec0
--else: ->elec1
+{clinicaDonado:
+- "true": ->elec0
+- else: ->elec1
 }
 
 ===elec0===
