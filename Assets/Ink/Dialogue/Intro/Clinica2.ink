@@ -20,7 +20,7 @@ Definitivamente eso ayudaría, pero no sé si podré pagarlo cada mes.
 #speaker: Jeringuito #portrait: 0
 …
     * [Prestar dinero]
-        ~ eleccion = "0"
+        ~ clinicaDonado = "true"
         #speaker: Jeringuito #portrait: 0
         Mira, podemos hacer esto: te presto el dinero y me lo vas devolviendo cuando puedas
         
@@ -34,7 +34,7 @@ Definitivamente eso ayudaría, pero no sé si podré pagarlo cada mes.
         ->siguiente
         
     * [Se las apañará]
-        ~ eleccion = "1"
+        ~ clinicaDonado = "false"
         #speaker: Jeringuito #portrait: 0
         …ya, lo siento mucho…
         

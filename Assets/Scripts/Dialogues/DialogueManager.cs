@@ -70,6 +70,7 @@ public class DialogueManager : MonoBehaviour
 
     private void cargarVariables(){
         SetVariable("partir",Globales.partir);
+        SetVariable("clinicaDonado",Globales.clinicaDonado);
     }
     public static DialogueManager GetInstance()
     {
@@ -311,6 +312,16 @@ public class DialogueManager : MonoBehaviour
             DialogueManager.GetInstance()
             .GetVariableState("partir")).value;
     }
+
+
+    public string GetUniversal(string vari)
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState(vari)).value;
+    }
+
+    
     public void SetVariable(string variable, string value){
         ((Ink.Runtime.StringValue)DialogueManager.GetInstance().GetVariableState(variable)).value=value;
     }

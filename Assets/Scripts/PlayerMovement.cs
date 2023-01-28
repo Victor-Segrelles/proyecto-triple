@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
-        Debug.Log(DialogueManager.GetInstance().Getpartir());
+        Debug.Log(Globales.clinicaDonado);
     }
     void FixedUpdate(){
 

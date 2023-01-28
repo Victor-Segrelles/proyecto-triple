@@ -55,9 +55,12 @@ public class Globales : MonoBehaviour
 
     //ink
     public static string partir="true";
-    public static string destino="";
+    public static string clinicaDonado="";
     //public static string partir="";
     //public static string partir="";
+
+    //historio
+    public static bool tiendaCinematica=true;
 
 }
 /* MANUAL DE USO 
