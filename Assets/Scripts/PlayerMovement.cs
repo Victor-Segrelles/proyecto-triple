@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
+        Debug.Log(DialogueManager.GetInstance().Getpartir());
     }
     void FixedUpdate(){
 
@@ -70,8 +71,6 @@ public class PlayerMovement : MonoBehaviour
         }
         //Debug.Log(sprite.sortingOrder); <>
     }
-
-
     void UpdateDirection()
     {
         if (lastClick.x < rigidbody2d.position.x)
@@ -82,7 +81,5 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetInteger("direction", 1);
         }
-
     }
-    
 }

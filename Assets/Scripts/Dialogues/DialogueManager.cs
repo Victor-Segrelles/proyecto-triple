@@ -64,10 +64,13 @@ public class DialogueManager : MonoBehaviour
         }
         instance = this;
 
-
+        //cargarVariables();
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
+    private void cargarVariables(){
+        SetVariable("partir",Globales.partir);
+    }
     public static DialogueManager GetInstance()
     {
         return instance;
@@ -86,6 +89,7 @@ public class DialogueManager : MonoBehaviour
             choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
             i++;
         }
+        cargarVariables();
     }
 
     // Update is called once per frame
@@ -114,6 +118,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
+
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         fondo.SetActive(true);
@@ -178,7 +183,6 @@ public class DialogueManager : MonoBehaviour
                 default:
                     break;
             }
-        
         }
     }
 
@@ -194,7 +198,6 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in line.ToCharArray())
         {
-            
            // if (Input.GetMouseButtonDown(0))
            // {
             //    dialogueText.text = line;
@@ -216,9 +219,6 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
-
-            
-            
         }
         continueIcon.SetActive(true);
         //isTalking = false;
@@ -304,7 +304,17 @@ public class DialogueManager : MonoBehaviour
             DialogueManager.GetInstance()
             .GetVariableState("destino")).value;
     }
-
+    //
+    public string Getpartir()
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("partir")).value;
+    }
+    public void SetVariable(string variable, string value){
+        ((Ink.Runtime.StringValue)DialogueManager.GetInstance().GetVariableState(variable)).value=value;
+    }
+    //
     public bool DialoguePlaying()
     {
         return dialogueIsPlaying;

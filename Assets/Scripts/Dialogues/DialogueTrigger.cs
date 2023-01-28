@@ -29,7 +29,7 @@ public class DialogueTrigger : MonoBehaviour
                 RaycastHit2D hit = Physics2D.Raycast(worldPosition, Vector2.zero);
                 if(hit.collider != null && hit.collider.gameObject.name == "Info")
                 {
-                    EnterDialogue();            
+                    EnterDialogue();
                 }
             }
         }
