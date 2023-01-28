@@ -10,6 +10,8 @@ public class ViruSpawn : MonoBehaviour
 {
     public GameObject virusPrefab;
     public Transform[] spawnPoints;
+    public GameObject[] spawnGrietas;
+    public int[] nspawnPoints;
     private float initialTime = 0;
     public int random;
 
@@ -20,6 +22,10 @@ public class ViruSpawn : MonoBehaviour
     void Start()
     {
         Spawn();
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            spawnGrietas[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -47,10 +53,12 @@ public class ViruSpawn : MonoBehaviour
                 if (hit.collider.gameObject.CompareTag("Virus"))
                 {
                     GameObject.Destroy(hit.transform.gameObject);
+                    spawnGrietas[random].SetActive(true);
+                    spawnGrietas[random].transform.localScale = new Vector3(spawnGrietas[random].transform.localScale.x + 0.04f * nspawnPoints[random], spawnGrietas[random].transform.localScale.y + 0.04f * nspawnPoints[random], 1f);
                     Spawn();
                     VirusPointsTime.GetInstance().ChangeScore(true);
                 }
-                VirusPointsTime.GetInstance().ShowScore();
+            VirusPointsTime.GetInstance().ShowScore();
         }
     }
 
@@ -59,8 +67,19 @@ public class ViruSpawn : MonoBehaviour
     {
         virus = Instantiate(virusPrefab) as GameObject;
         random = Random.Range(0, spawnPoints.Length);
+        if(nspawnPoints[random] >= 5)
+        {
+            for (int i = 0; i < spawnPoints.Length; i++)
+            {
+                if (nspawnPoints[i] < 5)
+                {
+                    random = i;
+                    break;
+                } 
+            }
+        }
+        nspawnPoints[random]++;
         virus.transform.position = spawnPoints[random].transform.position;
-        virus.transform.localScale = spawnPoints[random].transform.localScale/2;
         //virusPos =  virus.transform.position;
     }
 

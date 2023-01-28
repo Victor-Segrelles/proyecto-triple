@@ -8,6 +8,7 @@ public class VirusPointsTime : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI scoreText;
     [SerializeField] public TextMeshProUGUI timeText;
+    [SerializeField] private GameObject GameOverPanel;
     public int scoreNum;
     public int showTime;
     private static VirusPointsTime instance;
@@ -19,6 +20,7 @@ public class VirusPointsTime : MonoBehaviour
     }
     void Start()
     {
+        GameOverPanel.SetActive(false);
         GetInstance().ShowScore();
         timeText.text = "Tiempo: " + showTime;
     }
@@ -27,12 +29,15 @@ public class VirusPointsTime : MonoBehaviour
     void Update()
     {
         if (showTime == 0)
-            SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+            GameOver();
+        if(scoreNum >= 30)
+            SceneManager.LoadScene("Hielo"); //Game Over como ejemplo, se cambiará a la escena correspondiente
     }
 
     public void ShowScore()
     {
         scoreText.text = "Puntos: " + scoreNum;
+
     }
 
     public void ShowTime()
@@ -53,5 +58,11 @@ public class VirusPointsTime : MonoBehaviour
     public static VirusPointsTime GetInstance()
     {
         return instance;
+    }
+
+    void GameOver()
+    {
+        Time.timeScale = 0;
+        GameOverPanel.SetActive(true);
     }
 }

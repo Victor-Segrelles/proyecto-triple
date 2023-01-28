@@ -2,30 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-using Ink.UnityIntegration;
+using UnityEngine.SceneManagement;
+//using Ink.UnityIntegration;
 
 
 
 public class DialogueManager : MonoBehaviour
 {
     [Header("Params")]
-    [SerializeField] private float typingSpeed = 0.04f;
+    private float typingSpeed = 0.02f; //Esto estaba en 0.04f si está diferente es que lo he cambiado para ver más rapido las cinemáticas
 
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject continueIcon;
+    [SerializeField] private GameObject portraitImage;
     [SerializeField] private TextMeshProUGUI dialogueText;
     [SerializeField] private TextMeshProUGUI displayNameText;
     [SerializeField] private GameObject fondo;
+    [SerializeField] private Sprite[] spriteArray;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
 
 
-    [Header("Globals Ink File")]
-    [SerializeField] private InkFile globalsInkFile;
+    [Header("Load globals JSON")]
+    [SerializeField] private TextAsset loadGlobalsJSON;
 
     private const string SPEAKER_TAG = "speaker";
 
@@ -56,14 +60,18 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Hay m�s de un Dialogue Manager y no deberia");
+            Debug.LogWarning("Hay m�s de un Dialogue Manager y no deberia");
         }
         instance = this;
 
-
-        dialogueVariables = new DialogueVariables(globalsInkFile.filePath);
+        //cargarVariables();
+        dialogueVariables = new DialogueVariables(loadGlobalsJSON);
     }
 
+    private void cargarVariables(){
+        SetVariable("partir",Globales.partir);
+        SetVariable("clinicaDonado",Globales.clinicaDonado);
+    }
     public static DialogueManager GetInstance()
     {
         return instance;
@@ -82,6 +90,7 @@ public class DialogueManager : MonoBehaviour
             choicesText[i] = choice.GetComponentInChildren<TextMeshProUGUI>();
             i++;
         }
+        cargarVariables();
     }
 
     // Update is called once per frame
@@ -90,6 +99,10 @@ public class DialogueManager : MonoBehaviour
         if (!dialogueIsPlaying)
         {
             return;
+        }
+        else
+        {
+            ChooseMinigame();
         }
 
         if (Input.GetMouseButtonDown(0) && !choiceInDisplay)
@@ -106,6 +119,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
+
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         fondo.SetActive(true);
@@ -165,11 +179,11 @@ public class DialogueManager : MonoBehaviour
                     displayNameText.text = tagValue;
                     break;
                 case PORTRAIT_TAG:
+                    portraitImage.gameObject.GetComponent<Image>().sprite = spriteArray[int.Parse(tagValue)];
                     break;
                 default:
                     break;
             }
-        
         }
     }
 
@@ -185,7 +199,6 @@ public class DialogueManager : MonoBehaviour
 
         foreach (char letter in line.ToCharArray())
         {
-            
            // if (Input.GetMouseButtonDown(0))
            // {
             //    dialogueText.text = line;
@@ -207,9 +220,6 @@ public class DialogueManager : MonoBehaviour
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(typingSpeed);
             }
-
-            
-            
         }
         continueIcon.SetActive(true);
         //isTalking = false;
@@ -252,13 +262,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (canContinueToNextLine)
         {
+            Debug.Log("entra");
             currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
         }
        
     }
-
-
 
 
     public Ink.Runtime.Object GetVariableState(string variableName)
@@ -272,6 +281,55 @@ public class DialogueManager : MonoBehaviour
         return variableValue;
     }
 
+    void ChooseMinigame()
+    {
+        string minijuego = ((Ink.Runtime.StringValue) 
+            DialogueManager.GetInstance()
+            .GetVariableState("minijuego")).value;
+
+        //SceneManager.LoadScene("Ciudad");
+
+        if (minijuego != "ninguno")
+        {
+            SceneManager.LoadScene(minijuego);
+            ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("minijuego")).value = "ninguno";
+            ExitDialogueMode();
+        }
+    }
+
+    public string GetDestino()
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("destino")).value;
+    }
+    //
+    public string Getpartir()
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState("partir")).value;
+    }
+
+
+    public string GetUniversal(string vari)
+    {
+        return ((Ink.Runtime.StringValue)
+            DialogueManager.GetInstance()
+            .GetVariableState(vari)).value;
+    }
+
+    
+    public void SetVariable(string variable, string value){
+        ((Ink.Runtime.StringValue)DialogueManager.GetInstance().GetVariableState(variable)).value=value;
+    }
+    //
+    public bool DialoguePlaying()
+    {
+        return dialogueIsPlaying;
+    }
 
     
 }

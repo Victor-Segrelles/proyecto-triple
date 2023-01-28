@@ -9,7 +9,7 @@ public class EconomiaI : Talent
     }
     public override bool Click(){
         if(base.Click()){
-            Globales.ECONOMIA+=0.1f;
+            Globales.ECONOMIA+=0.05f;
             Debug.Log(Globales.ECONOMIA);
             Globales.Economia1++;
             return true;

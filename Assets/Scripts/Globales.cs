@@ -5,7 +5,7 @@ using UnityEngine;
 public class Globales : MonoBehaviour
 {
     public static int PRESTIGE=0;
-    public static float DINERO=30000;
+    public static float DINERO=16000;
 
 
 
@@ -14,7 +14,7 @@ public class Globales : MonoBehaviour
     public static float ECONOMIA=1;
     //mejora resultados (dando mas prestigio)
     public static float REPUTACION=1;
-    //mejora resultados (en generan) y reduce gastos de materiales
+    //mejora resultados (en general) y reduce gastos de materiales
     public static float EFICIENCIA=1;
 
 
@@ -39,6 +39,29 @@ public class Globales : MonoBehaviour
     public static bool UnlockedEficiencia3=false;
     public static int Reputacion3=0;
     public static bool UnlockedReputacion3=false;
+
+    //desbloqueos de zonas viaje rapido
+
+    public static bool Medieval=false;
+    public static bool Hielo=false;
+    public static bool Selva=false;
+    public static bool Desierto=false;
+
+    //recursos
+    public static int madera=0;
+    public static int suministros=0;
+    public static int vacunas=0;
+    public static int tiritas=0;
+
+    //ink
+    public static string partir="true";
+    public static string clinicaDonado="true";
+    //public static string partir="";
+    //public static string partir="";
+
+    //historio
+    public static bool tiendaCinematica=true;
+
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */
