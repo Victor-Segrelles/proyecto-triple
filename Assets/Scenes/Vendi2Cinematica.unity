@@ -276,7 +276,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 26eafa4a7868006489a3168e20b35355, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 26771f7688f42b540b71f4a310b27672, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -400,11 +400,11 @@ PrefabInstance:
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: spriteArray.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 26eafa4a7868006489a3168e20b35355, type: 3}
+      objectReference: {fileID: 21300000, guid: 26771f7688f42b540b71f4a310b27672, type: 3}
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: spriteArray.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 42d1ea1611ad7014482a087a727df22c, type: 3}
+      objectReference: {fileID: 21300000, guid: 26eafa4a7868006489a3168e20b35355, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
 --- !u!1 &925900776
@@ -465,7 +465,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 189fa21cd78e9d8458dcc96a95791aef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a8fe19ed8f1c4314ab663413e47ac0b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -760,7 +760,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 276dcfc938a0c6d488ecaca3eb502d96, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6aa0ff118f32f87429c82793968e41ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -844,7 +844,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: cba4ec0873114204c8f51f1c9ab4ebf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 95bb4b94f83ec13498a10469e73f532f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
