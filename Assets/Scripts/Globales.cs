@@ -53,6 +53,12 @@ public class Globales : MonoBehaviour
     public static int vacunas=0;
     public static int tiritas=0;
 
+    //ink
+    public static string partir="true";
+    public static string destino="";
+    //public static string partir="";
+    //public static string partir="";
+
 }
 /* MANUAL DE USO 
 Globales.VARIABLE= cosa */

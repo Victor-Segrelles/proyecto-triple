@@ -12,6 +12,7 @@ public class Cinematicas : MonoBehaviour
     public TextMeshProUGUI text2;
     public TextAsset inkJSON;
     public string escena;
+    public string aCambiar;
     float fspeed = 0.5f;
     Color objectColor;
     float fadeAmount = 1;
@@ -51,6 +52,18 @@ public class Cinematicas : MonoBehaviour
             blackScreen.GetComponent<Image>().color = objectColor;
             if (fadeAmount > 1)
             {
+                switch(aCambiar) 
+                {
+                case "partir":
+                    Globales.partir="false";
+                    break;
+                case "cafetera":
+                    // code block
+                    break;
+                default:
+                    // code block
+                    break;
+                }
                 SceneManager.LoadScene(escena);
             }
 
