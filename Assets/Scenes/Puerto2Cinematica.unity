@@ -177,7 +177,7 @@ MonoBehaviour:
   text2: {fileID: 1215453162}
   inkJSON: {fileID: 4900000, guid: 84e75c6013f267e42866f79a117564ff, type: 3}
   escena: Ciudad
-  aCambiar: partir
+  aCambiar: paraselva
 --- !u!1 &950237584
 GameObject:
   m_ObjectHideFlags: 0

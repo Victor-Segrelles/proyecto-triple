@@ -1,13 +1,13 @@
 INCLUDE ../globals.ink
 ->elegir
 ===elegir===
-{partir:
+{paraselva:
 - "true": ->main
 - else: ->main2
 }
 ===main===
 #speaker: Tanic #portrait: 1
-~ partir = "false"
+~ paraselva = "false"
 ~ minijuego="Puerto2Cinematica"
 ->DONE
 

@@ -25,13 +25,13 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2d.position=Globales.lastPosition;
     }
     void Update() {
+        Debug.Log(Globales.paraselva);
         if (Input.GetMouseButton(0)){
             lastClick=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving=true;
         } else {
             moving=false;
         }
-        Debug.Log(Globales.lastPosition);
     }
     void FixedUpdate(){
 

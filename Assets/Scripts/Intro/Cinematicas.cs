@@ -57,9 +57,9 @@ public class Cinematicas : MonoBehaviour
                 case "partir":
                     Globales.partir="false";
                     break;
-                case "cafetera":
-                    // code block
-                    break;
+                case "paraselva":
+                     Globales.paraselva = "false";
+                     break;
                 default:
                     // code block
                     break;

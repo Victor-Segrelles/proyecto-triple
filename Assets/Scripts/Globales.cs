@@ -56,6 +56,7 @@ public class Globales : MonoBehaviour
     //ink
     public static string partir="true";
     public static string clinicaDonado="true";
+    public static string paraselva = "true";
     //public static string partir="";
     //public static string partir="";
 

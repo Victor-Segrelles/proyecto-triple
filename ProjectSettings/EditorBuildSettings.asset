@@ -111,6 +111,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Pueblo2Cinematica.unity
     guid: a9dda2f1fa0c3f74e8b4bfad46135e74
   - enabled: 1
+    path: Assets/Scenes/LlegadaCinematica.unity
+    guid: fb7017bceba8cbe41b5750aa71568dd2
+  - enabled: 1
     path: Assets/Scenes/CarpaCinematica.unity
     guid: 5157e8b8b5dc6914187c866a2d0e8d1d
   m_configObjects: {}

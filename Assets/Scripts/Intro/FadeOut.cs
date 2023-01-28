@@ -84,7 +84,7 @@ public class FadeOut : MonoBehaviour
                     }
                     else if (continuacion == 1)
                     {
-                        text1.text = "Y as�, Jeringuito se dirigi� a la sala del trono para su audiencia con el rey.";
+                        text1.text = "Y así, Jeringuito se dirigió a la sala del trono para su audiencia con el rey.";
                         text2.text = "";
                         continuacion = 2;
                     }
