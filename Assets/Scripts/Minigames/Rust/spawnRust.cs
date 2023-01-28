@@ -52,7 +52,11 @@ public class spawnRust : MonoBehaviour
             }
             else 
             {
+<<<<<<< Updated upstream
                 SceneManager.LoadScene("GameOver"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+=======
+                SceneManager.LoadScene("PostOxidoCinematica"); //Game Over como ejemplo, se cambiarï¿½ a la escena correspondiente
+>>>>>>> Stashed changes
             }
 
         }
@@ -101,7 +105,7 @@ public class spawnRust : MonoBehaviour
     {
         character[i].SetActive(true);
         character[i].gameObject.layer = LayerMask.NameToLayer("Default");
-        rustPosition = new Vector3(Random.Range(-7f, 7f), Random.Range(-4f, 4f), 0f);
+        rustPosition = new Vector3(Random.Range(-6f, 6f), Random.Range(-2f, 2f), 0f);
 
         rustAmount = Random.Range(3, 5);
         GenerateRust(rustAmount);

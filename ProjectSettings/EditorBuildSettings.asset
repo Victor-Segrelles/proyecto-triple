@@ -15,6 +15,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Level1.unity
     guid: 70008b7b1b5bf5f4b98401e3af906d5c
   - enabled: 1
+<<<<<<< Updated upstream
+=======
+    path: Assets/Scenes/Final.unity
+    guid: ec5f0e76adf260c4fbcb1f7d111affed
+  - enabled: 1
+    path: Assets/Scenes/Hielo2Cinematica.unity
+    guid: 60ed1a1e83292a148bc12ecf2262b727
+  - enabled: 1
+    path: Assets/Scenes/HieloCinematica.unity
+    guid: 84bda10137a936448a6142125fced252
+  - enabled: 1
+    path: Assets/Scenes/SelvaCinematica.unity
+    guid: 79cb5f2f0cf684b4ea14f7fdb3a3373e
+  - enabled: 1
+    path: Assets/Scenes/CarpaCinematica.unity
+    guid: 5157e8b8b5dc6914187c866a2d0e8d1d
+  - enabled: 1
+>>>>>>> Stashed changes
     path: Assets/Scenes/MinigameDriving.unity
     guid: 39fc5681716615f49ba580873dd85e81
   - enabled: 1

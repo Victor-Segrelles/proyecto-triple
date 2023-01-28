@@ -26,11 +26,17 @@
             // single click
             if (onClick && clickCount == 1)
             {
+<<<<<<< Updated upstream
                 if(Globales.Medieval){
                     SceneManager.LoadScene("Level1");
                     Time.timeScale=1;
                 }
 
+=======
+                Globales.lastPosition.Set(0, -3, 0);
+                SceneManager.LoadScene("Ciudad");
+                Time.timeScale=1;
+>>>>>>> Stashed changes
             }
        
             // double click

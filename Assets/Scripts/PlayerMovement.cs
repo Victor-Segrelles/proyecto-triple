@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,11 +17,12 @@ public class PlayerMovement : MonoBehaviour
     //Para controlar las animaciones 
     public Animator animator;
 
-    void start(){
-        rigidbody2d=GetComponent<Rigidbody2D>();
+    void Start(){
+        rigidbody2d =GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         sprite.sortingOrder=0;
         lastPos = rigidbody2d.position;
+        rigidbody2d.position = Globales.lastPosition;
     }
     void Update() {
         if (Input.GetMouseButton(0)){
