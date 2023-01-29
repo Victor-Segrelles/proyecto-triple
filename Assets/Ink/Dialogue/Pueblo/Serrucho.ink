@@ -4,12 +4,5 @@ INCLUDE ../globals.ink
 
 ===main===
 #speaker: Virto #portrait: 7
-Hola, ¿Quieres iniciar el minijuego de navegar?
-    * [Si]
-        ~ minijuego = "MinigameDriving"
-        ~ destino = "Desierto"
-        ->DONE
-        
-    * [No]
-        ¡Vuelve cuando quieras!
+Muchas gracias por la ayuda, creo que una voz familiar te está llamando desde el puerto.
 ->END

@@ -1,6 +1,6 @@
 ->main
 
 ===main===
-#speaker: Hueso #portrait: 2
-Soy un hueso.
+#speaker: Sans #portrait: 2
+Es un día hermoso, los pajaros cantan, las flores florecen.
 ->END

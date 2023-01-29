@@ -1,6 +1,6 @@
 ->main
 
 ===main===
-#speaker: Castillo #portrait: 1
-Soy un castillo de arena.
+#speaker: Sandy #portrait: 1
+Bienvenidos a Lianba, no solemos recibir mucha gente, espero que os guste nuestra isla.
 ->END

@@ -4,11 +4,5 @@ INCLUDE ../globals.ink
 
 ===main===
 #speaker: Bola de nieve #portrait: 1
-Hola, ¿Quieres iniciar el minijuego de rescate en el hielo?
-    * [Si]
-        ~ minijuego = "MinigameWhack-a-virus"
-        ->DONE
-        
-    * [No]
-        ¡Vuelve cuando quieras!
+Las tormentas de nieve son muy comunes por aquí, pero la de esta vez ha sido más grande de lo normal.
 ->END

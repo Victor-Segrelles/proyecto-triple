@@ -1,6 +1,6 @@
 ->main
 
 ===main===
-#speaker: Lanza #portrait: 5
-Soy una lanza.
+#speaker: Lanco #portrait: 5
+Vendi se pasa todo el dia en el laboratorio, me gustaria que saliera a jugar con nosotros más a menudo.
 ->END 

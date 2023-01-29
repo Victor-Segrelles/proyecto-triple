@@ -2,5 +2,5 @@
 
 ===main===
 #speaker: Llave inglesa #portrait: 1
-Soy una llave inglesa.
+Gracias por curarme, ojalá el rey no nos abandonara a nuestra suerte.
 ->END

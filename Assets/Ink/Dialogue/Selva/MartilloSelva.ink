@@ -1,6 +1,6 @@
 ->main
 
 ===main===
-#speaker: Martillo #portrait: 4
-Soy un martillo.
+#speaker: Thor #portrait: 4
+El laboratorio de Vendi es el mejor del mundo entero.
 ->END

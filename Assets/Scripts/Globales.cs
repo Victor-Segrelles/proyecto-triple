@@ -70,6 +70,7 @@ public class Globales : MonoBehaviour
     public static bool tiendaCinematica=true;
     public static bool clinicareparada=false;
     public static string estaTanic = "true";
+    public static string hielofinal = "true";
     public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
     //public static bool encuentroTanic=true;
     //public static bool encuentroHoye=true;

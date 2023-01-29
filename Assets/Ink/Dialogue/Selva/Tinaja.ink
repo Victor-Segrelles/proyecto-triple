@@ -4,11 +4,6 @@ INCLUDE ../globals.ink
 
 ===main===
 #speaker: Tinaja #portrait: 6
-Hola, ¿Quieres iniciar el minijuego de curar?
-    * [Si]
-        ~ minijuego = "MinigameCures"
-        ->DONE
-        
-    * [No]
-        ¡Vuelve cuando quieras!
+¿Vienes de la capital? Debe ser un sitio alucinante, yo nunca he salido de esta isla.
+
 ->END
