@@ -16,7 +16,7 @@ INCLUDE ../globals.ink
 ¿Nos vamos?
     * [Allá vamos]
         El viaje a Lianba es algo más difícil que el de Cayeferro así que…¡agárrate bien!
-		~ destino = "LlegadaSelvaCinematica"
+		~ destino = "SelvaLlegadaCinematica"
         ~ minijuego = "MinigameDriving"
         ->DONE
         
