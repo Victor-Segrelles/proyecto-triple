@@ -21,7 +21,7 @@ public class TalentTree : MonoBehaviour
     }
 
     public void TryMejora(Talent talent){
-        if(Globales.DINERO>talent.coste() && talent.Click()){
+        if(Globales.DINERO-Globales.DINERO_RECAMBIO>talent.coste() && talent.Click()){
             Globales.DINERO-=talent.coste();
             Debug.Log(Globales.DINERO);
         }
