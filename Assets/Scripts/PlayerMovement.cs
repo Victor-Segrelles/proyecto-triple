@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
         rigidbody2d.position=Globales.lastPosition;
     }
     void Update() {
-        Debug.Log(Globales.paradesierto);
         if (Input.GetMouseButton(0)){
             lastClick=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving=true;

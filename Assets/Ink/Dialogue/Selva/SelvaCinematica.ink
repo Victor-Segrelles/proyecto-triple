@@ -29,4 +29,6 @@ Varios de sus habitantes se han quedado atrapados en el hielo y no pueden salir.
 #speaker: Vendi #portrait: 1
 ¡Voy contigo!
 Conforme les vayáis rescatando yo revisaré que el hielo no les haya causado daños. 
+~ destino = "HieloCinematica"
+~ minijuego = "MinigameDriving"
 ->END

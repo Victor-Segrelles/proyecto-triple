@@ -63,11 +63,11 @@ public class DrivingPlayerMovement : MonoBehaviour
         {
             if(destino=="PuebloCinematica"){
                 Globales.Medieval=true;
-            } else if (destino=="Desierto"){
+            } else if (destino=="DesiertoCinematica"){
                 Globales.Desierto=true;
-            } else if (destino=="Hielo"){
+            } else if (destino=="HieloCinematica"){
                 Globales.Hielo=true;
-            } else if (destino=="Selva"){
+            } else if (destino=="SelvaLlegadaCinematica"){
                 Globales.Selva=true;
             }
             Globales.PRESTIGE+=(int)((10+life*40)*Globales.REPUTACION);//formula del prestigio provisional
