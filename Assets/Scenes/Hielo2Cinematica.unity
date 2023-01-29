@@ -1191,7 +1191,7 @@ MonoBehaviour:
   text1: {fileID: 165911626}
   text2: {fileID: 1190619724}
   inkJSON: {fileID: 4900000, guid: d4475ee321202834680cd7eba73a729d, type: 3}
-  escena: Hielo
+  escena: Final
   aCambiar: hielofinal
 --- !u!114 &1820023627
 MonoBehaviour:

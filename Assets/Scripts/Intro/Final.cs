@@ -31,7 +31,7 @@ public class Final : MonoBehaviour
         {
             if(continuacion == 3)
             {
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("Hielo");
             }
             fadeText -= fspeed * Time.deltaTime;
             objectColor = new Color(255f, 255f, 255f, fadeText);
