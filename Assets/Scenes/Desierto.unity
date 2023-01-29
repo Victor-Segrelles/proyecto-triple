@@ -908,11 +908,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &164093044 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2362389218338369334, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
-  m_PrefabInstance: {fileID: 11198826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &172366319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2362389217982092822, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
@@ -1599,6 +1594,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!1 &701949692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 675897647060631256, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
+  m_PrefabInstance: {fileID: 11198826}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &767319839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2362389218009934366, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
@@ -3163,7 +3163,7 @@ PrefabInstance:
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: continueIcon
       value: 
-      objectReference: {fileID: 164093044}
+      objectReference: {fileID: 701949692}
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: dialogueText
       value: 

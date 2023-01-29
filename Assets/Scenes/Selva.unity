@@ -258,7 +258,7 @@ PrefabInstance:
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: continueIcon
       value: 
-      objectReference: {fileID: 1445569276}
+      objectReference: {fileID: 719396263}
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: dialogueText
       value: 
@@ -1351,6 +1351,11 @@ Transform:
   m_Father: {fileID: 942611893}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &719396263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 675897647060631256, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
+  m_PrefabInstance: {fileID: 1445569269}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752549859
 GameObject:
   m_ObjectHideFlags: 0
@@ -3333,11 +3338,6 @@ MonoBehaviour:
 --- !u!1 &1445569275 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2362389217982092822, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
-  m_PrefabInstance: {fileID: 1445569269}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1445569276 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2362389218338369334, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
   m_PrefabInstance: {fileID: 1445569269}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1445569277 stripped

@@ -1107,4 +1107,4 @@ MonoBehaviour:
   text2: {fileID: 1190619724}
   inkJSON: {fileID: 4900000, guid: 18fa069eebce06647a3ec7a1be04b21e, type: 3}
   escena: LlegadaCinematica
-  aCambiar: 
+  aCambiar: estaTanic

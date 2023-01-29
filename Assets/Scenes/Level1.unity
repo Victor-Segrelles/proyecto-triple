@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &23714359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 675897647060631256, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
+  m_PrefabInstance: {fileID: 2362389218773185904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &60472523
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,11 +796,6 @@ BoxCollider2D:
 Camera:
   m_CorrespondingSourceObject: {fileID: 1134364214207695236, guid: e8bca8cefe6e62e4da797fece02afad8, type: 3}
   m_PrefabInstance: {fileID: 1134364214592799072}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &443898438 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2362389218338369334, guid: 9fa43fe65df67d748bedd12626d12ed1, type: 3}
-  m_PrefabInstance: {fileID: 2362389218773185904}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &472083431
 GameObject:
@@ -4254,7 +4254,7 @@ PrefabInstance:
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: continueIcon
       value: 
-      objectReference: {fileID: 443898438}
+      objectReference: {fileID: 23714359}
     - target: {fileID: 1111978830554712843, guid: 8e6df319fdeb1e6439b2a024cf22d3b2, type: 3}
       propertyPath: dialogueText
       value: 

@@ -66,6 +66,7 @@ public class Globales : MonoBehaviour
 
     //historio
     public static bool tiendaCinematica=true;
+    public static string estaTanic = "estaTanic";
     public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
     //public static bool encuentroTanic=true;
     //public static bool encuentroHoye=true;

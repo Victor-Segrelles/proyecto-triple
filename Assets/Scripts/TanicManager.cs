@@ -9,16 +9,25 @@ public class TanicManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Globales.cinematicavista == "false")
+        if (Globales.estaTanic == "true")
         {
-            TanicDesierto.SetActive(true);
+            TanicDesierto.SetActive(false);
             TanicSelva.SetActive(false);
         }
         else
         {
-            TanicDesierto.SetActive(false);
-            TanicSelva.SetActive(true);
+            if (Globales.cinematicavista == "false")
+            {
+                TanicDesierto.SetActive(true);
+                TanicSelva.SetActive(false);
+            }
+            else
+            {
+                TanicDesierto.SetActive(false);
+                TanicSelva.SetActive(true);
+            }
         }
+
     }
 
     // Update is called once per frame
