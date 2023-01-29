@@ -722,7 +722,7 @@ GameObject:
   - component: {fileID: 403622554}
   - component: {fileID: 403622553}
   - component: {fileID: 403622552}
-  - component: {fileID: 403622551}
+  - component: {fileID: 403622555}
   m_Layer: 5
   m_Name: cerrarMadera
   m_TagString: Untagged
@@ -750,19 +750,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.699, y: 1.796}
   m_SizeDelta: {x: 1.0719, y: 1.0867}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &403622551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403622549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68930d3fdc437214b922a9bb8c12c39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interfazi: {fileID: 2025768388}
 --- !u!114 &403622552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -845,8 +832,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 403622551}
-        m_TargetAssemblyTypeName: Botontienda, Assembly-CSharp
+      - m_Target: {fileID: 403622555}
+        m_TargetAssemblyTypeName: cerrarSecundario, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -857,6 +844,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &403622555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403622549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9ec77fc125f5a44b08e60cd37b36a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfazi: {fileID: 2025768388}
 --- !u!1 &414067653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,7 +3568,7 @@ GameObject:
   - component: {fileID: 1593234258}
   - component: {fileID: 1593234257}
   - component: {fileID: 1593234256}
-  - component: {fileID: 1593234255}
+  - component: {fileID: 1593234259}
   m_Layer: 5
   m_Name: cerrarSumi
   m_TagString: Untagged
@@ -3596,19 +3596,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.647, y: 1.684}
   m_SizeDelta: {x: 1.07, y: 1.07}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1593234255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1593234253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68930d3fdc437214b922a9bb8c12c39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interfazi: {fileID: 120555524}
 --- !u!114 &1593234256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3691,8 +3678,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1593234255}
-        m_TargetAssemblyTypeName: Botontienda, Assembly-CSharp
+      - m_Target: {fileID: 1593234259}
+        m_TargetAssemblyTypeName: cerrarSecundario, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -3703,6 +3690,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1593234259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593234253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9ec77fc125f5a44b08e60cd37b36a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfazi: {fileID: 120555524}
 --- !u!1 &1623556773
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,7 +4002,7 @@ GameObject:
   - component: {fileID: 1748627758}
   - component: {fileID: 1748627757}
   - component: {fileID: 1748627756}
-  - component: {fileID: 1748627755}
+  - component: {fileID: 1748627759}
   m_Layer: 5
   m_Name: cerrarVacuna
   m_TagString: Untagged
@@ -4030,19 +4030,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.683, y: 1.732}
   m_SizeDelta: {x: 1.07, y: 1.07}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1748627755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1748627753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68930d3fdc437214b922a9bb8c12c39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interfazi: {fileID: 644433318}
 --- !u!114 &1748627756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4125,8 +4112,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1748627755}
-        m_TargetAssemblyTypeName: Botontienda, Assembly-CSharp
+      - m_Target: {fileID: 1748627759}
+        m_TargetAssemblyTypeName: cerrarSecundario, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -4137,6 +4124,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1748627759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1748627753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9ec77fc125f5a44b08e60cd37b36a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfazi: {fileID: 644433318}
 --- !u!1 &1759807933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,7 +4626,7 @@ GameObject:
   - component: {fileID: 1957392589}
   - component: {fileID: 1957392588}
   - component: {fileID: 1957392587}
-  - component: {fileID: 1957392586}
+  - component: {fileID: 1957392590}
   m_Layer: 5
   m_Name: cerrarTirita
   m_TagString: Untagged
@@ -4654,19 +4654,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1.635, y: 1.736}
   m_SizeDelta: {x: 1.07, y: 1.07}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1957392586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1957392584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68930d3fdc437214b922a9bb8c12c39a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interfazi: {fileID: 17332567}
 --- !u!114 &1957392587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4749,8 +4736,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1957392586}
-        m_TargetAssemblyTypeName: Botontienda, Assembly-CSharp
+      - m_Target: {fileID: 1957392590}
+        m_TargetAssemblyTypeName: cerrarSecundario, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -4761,6 +4748,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1957392590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957392584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9ec77fc125f5a44b08e60cd37b36a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interfazi: {fileID: 17332567}
 --- !u!1 &2025768388
 GameObject:
   m_ObjectHideFlags: 0
