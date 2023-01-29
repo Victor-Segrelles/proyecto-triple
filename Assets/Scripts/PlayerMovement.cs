@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
     void Start(){
         rigidbody2d=GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
-        sprite.sortingOrder=0;
+        //sprite.sortingOrder=0;
         lastPos = rigidbody2d.position;
         rigidbody2d.position=Globales.lastPosition;
     }
     void Update() {
-        Debug.Log(Globales.paraselva);
+        Debug.Log(Globales.paradesierto);
         if (Input.GetMouseButton(0)){
             lastClick=Camera.main.ScreenToWorldPoint(Input.mousePosition);
             moving=true;

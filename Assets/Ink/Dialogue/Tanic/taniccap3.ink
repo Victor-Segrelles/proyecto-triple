@@ -22,4 +22,4 @@ INCLUDE ../globals.ink
         
     * [Aún no]
         Avísame cuando estés listo.
-->END
+->DONE

@@ -177,6 +177,7 @@ MonoBehaviour:
   text2: {fileID: 1215453162}
   inkJSON: {fileID: 4900000, guid: 9997ba1737758f742a8559ec134f75ac, type: 3}
   escena: Ciudad
+  aCambiar: paradesierto
 --- !u!1 &950237584
 GameObject:
   m_ObjectHideFlags: 0

@@ -60,7 +60,19 @@ public class Cinematicas : MonoBehaviour
                 case "paraselva":
                      Globales.paraselva = "false";
                      break;
-                default:
+                case "paradesierto":
+                    Globales.paradesierto = "false";
+                    break;
+                case "cinematicavista":
+                    Globales.cinematicavista = "false";
+                    break;
+                case "parahielo":
+                    Globales.parahielo = "false";
+                    break;
+                case "parafinal":
+                    Globales.parafinal = "false";
+                    break;
+                    default:
                     // code block
                     break;
                 }

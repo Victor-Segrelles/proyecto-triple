@@ -31,7 +31,7 @@ public class VirusPointsTime : MonoBehaviour
         if (showTime == 0)
             GameOver();
         if(scoreNum >= 30)
-            SceneManager.LoadScene("Hielo"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+            SceneManager.LoadScene("Hielo2Cinematica"); //Game Over como ejemplo, se cambiará a la escena correspondiente
     }
 
     public void ShowScore()

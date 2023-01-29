@@ -26,7 +26,7 @@ En agradecimiento por tu ayuda, te doy permiso para que la uses siempre que la n
 Yo ya me estaba quedando tieso…
 #speaker: Vendi #portrait: 1
 Me alegra oír que te sirve. ¿Te marchas ya?
-#speaker: Jeringuito #portrait: 
+#speaker: Jeringuito #portrait: 0
 Sí, mi trabajo aquí ha terminado. ¡Nos vemos!
 #speaker: Vendi #portrait: 1
 ¡Adiós!

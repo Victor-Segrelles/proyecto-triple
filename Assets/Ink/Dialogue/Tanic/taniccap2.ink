@@ -6,7 +6,7 @@ INCLUDE ../globals.ink
 - else: ->main2
 }
 ===main===
-#speaker: Tanic #portrait: 1
+#speaker: Tanic #portrait: 12
 Debemos ayudar a los ciudadanos de Cayeferro.
 ->DONE
 

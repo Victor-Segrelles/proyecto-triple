@@ -1103,3 +1103,4 @@ MonoBehaviour:
   text2: {fileID: 1190619724}
   inkJSON: {fileID: 4900000, guid: 2786d9562a0a91842b3257a716e8d406, type: 3}
   escena: Selva
+  aCambiar: cinematicavista

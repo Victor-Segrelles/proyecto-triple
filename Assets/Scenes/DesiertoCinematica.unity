@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 742382372}
   - component: {fileID: 742382373}
+  - component: {fileID: 742382374}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -345,6 +346,20 @@ MonoBehaviour:
   text2: {fileID: 1215453162}
   inkJSON: {fileID: 4900000, guid: 51efc723691841a4c9d103690cd8651e, type: 3}
   escena: Desierto
+  aCambiar: parahielo
+--- !u!114 &742382374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742382370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad7c9bd2c8784f489a24dd54b53820f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicion: {x: -35, y: 0, z: 0}
 --- !u!1 &950237584
 GameObject:
   m_ObjectHideFlags: 0

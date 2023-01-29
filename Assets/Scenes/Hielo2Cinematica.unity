@@ -1152,6 +1152,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1820023625}
   - component: {fileID: 1820023626}
+  - component: {fileID: 1820023627}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1191,3 +1192,17 @@ MonoBehaviour:
   text2: {fileID: 1190619724}
   inkJSON: {fileID: 4900000, guid: d4475ee321202834680cd7eba73a729d, type: 3}
   escena: Hielo
+  aCambiar: 
+--- !u!114 &1820023627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820023623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad7c9bd2c8784f489a24dd54b53820f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicion: {x: 0, y: -3, z: 0}

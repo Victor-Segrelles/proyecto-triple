@@ -57,6 +57,10 @@ public class Globales : MonoBehaviour
     public static string partir="true";
     public static string clinicaDonado="true";
     public static string paraselva = "true";
+    public static string paradesierto = "true";
+    public static string parahielo = "true";
+    public static string cinematicavista = "true";
+    public static string parafinal = "true";
     //public static string partir="";
     //public static string partir="";
 

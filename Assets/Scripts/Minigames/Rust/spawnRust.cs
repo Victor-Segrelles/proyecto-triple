@@ -91,7 +91,7 @@ public class spawnRust : MonoBehaviour
                     i++;
                 }
             }
-            rustPosition = new Vector3(Random.Range(0f, 5f), Random.Range(-3f, 3f), 0f);
+            rustPosition = new Vector3(Random.Range(1f, 5f), Random.Range(-2f, 2f), 0f);
             Debug.Log("I");
         }
     }

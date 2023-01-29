@@ -72,6 +72,10 @@ public class DialogueManager : MonoBehaviour
         SetVariable("partir",Globales.partir);
         SetVariable("clinicaDonado",Globales.clinicaDonado);
         SetVariable("paraselva", Globales.paraselva);
+        SetVariable("paradesierto", Globales.paradesierto);
+        SetVariable("parahielo", Globales.parahielo);
+        SetVariable("parafinal", Globales.parafinal);
+        SetVariable("cinematicavista", Globales.cinematicavista);
     }
     public static DialogueManager GetInstance()
     {
