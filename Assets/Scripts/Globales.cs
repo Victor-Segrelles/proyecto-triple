@@ -6,6 +6,7 @@ public class Globales : MonoBehaviour
 {
     public static int PRESTIGE=0;
     public static float DINERO=16000;
+    public static float DINERO_RECAMBIO=4000;
 
 
 
