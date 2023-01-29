@@ -2,5 +2,5 @@
 
 ===main===
 #speaker: Poppy #portrait: 3
-Gracias por la ayuda Jeringuito, estoy a rebosar de energia.
+No me encuentro muy bien, espero que el rey nos ayude.
 ->END
