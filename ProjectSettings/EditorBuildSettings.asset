@@ -116,4 +116,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CarpaCinematica.unity
     guid: 5157e8b8b5dc6914187c866a2d0e8d1d
+  - enabled: 1
+    path: Assets/Scenes/SelvaLlegadaCinematica.unity
+    guid: b41cd3cd19d961b45ba010ff5ffef4dc
   m_configObjects: {}

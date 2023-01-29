@@ -91,7 +91,7 @@ public class spawnRust : MonoBehaviour
                     i++;
                 }
             }
-            rustPosition = new Vector3(Random.Range(1f, 5f), Random.Range(-2f, 2f), 0f);
+            rustPosition = new Vector3(Random.Range(2f, 5f), Random.Range(-2f, 2f), 0f);
             Debug.Log("I");
         }
     }
@@ -101,7 +101,7 @@ public class spawnRust : MonoBehaviour
     {
         character[i].SetActive(true);
         character[i].gameObject.layer = LayerMask.NameToLayer("Default");
-        rustPosition = new Vector3(Random.Range(-6f, 6f), Random.Range(-2f, 2f), 0f);
+        rustPosition = new Vector3(Random.Range(2f, 5f), Random.Range(-2f, 2f), 0f);
 
         rustAmount = Random.Range(3, 5);
         GenerateRust(rustAmount);
