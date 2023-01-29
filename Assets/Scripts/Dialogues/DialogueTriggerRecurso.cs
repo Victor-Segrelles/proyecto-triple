@@ -14,6 +14,7 @@ public class DialogueTriggerRecurso : MonoBehaviour
     [SerializeField] private int madera=0;
     [SerializeField] private int tiritas=0;
     [SerializeField] private int suministros=0;
+    [SerializeField] private int dinero=0;
 
 
     private bool playerInRange;
@@ -40,6 +41,7 @@ public class DialogueTriggerRecurso : MonoBehaviour
                         Globales.madera+=madera;
                         Globales.tiritas+=tiritas;
                         Globales.suministros+=suministros;
+                        Globales.DINERO+=dinero;
                         Globales.clinicareparada=true;
                     }
                     EnterDialogue();

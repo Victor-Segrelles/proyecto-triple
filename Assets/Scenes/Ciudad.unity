@@ -883,9 +883,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 050ba4c8ecd94844f8f51ba5fcf8a2c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1464,7 +1464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 528645577}
   - component: {fileID: 528645579}
-  - component: {fileID: 528645578}
+  - component: {fileID: 528645580}
   m_Layer: 2
   m_Name: Trigger
   m_TagString: Untagged
@@ -1487,20 +1487,6 @@ Transform:
   m_Father: {fileID: 1524451198}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &528645578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528645576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9ace10fb16ed648ba671816e6b3372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  info: {fileID: 1412692285}
-  inkJSON: {fileID: 4900000, guid: 1e0d77f3a7dc46e47b59c5bb7262de43, type: 3}
 --- !u!61 &528645579
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1527,6 +1513,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &528645580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528645576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 378f846a6fccee045b8918711912de80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  info: {fileID: 1412692285}
+  inkJSON: {fileID: 4900000, guid: 1e0d77f3a7dc46e47b59c5bb7262de43, type: 3}
+  vacunas: 0
+  madera: 0
+  tiritas: 0
+  suministros: -5
+  dinero: -3000
 --- !u!4 &547625567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2791517601803994256, guid: 30cfb4bc1364b5a49ac478e866b3f4f9, type: 3}
@@ -3082,6 +3087,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1524451198}
+  - component: {fileID: 1524451199}
   m_Layer: 0
   m_Name: TanicDesierto
   m_TagString: Untagged
@@ -3107,6 +3113,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1524451199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524451197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66cd02c2b7ee0b6439b4fb8cd8a8725e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1570720548
 GameObject:
   m_ObjectHideFlags: 0

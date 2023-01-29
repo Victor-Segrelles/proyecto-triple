@@ -9,6 +9,10 @@ public class CheckRecursos : MonoBehaviour
     {
         if(Globales.madera>6 && Globales.suministros>1 && Globales.vacunas>0){
             Globales.checkRecursosSelva="false";
+        } else {
+            if(!Globales.clinicareparada){
+                Globales.checkRecursosSelva="true";
+            }
         }
     }
 }

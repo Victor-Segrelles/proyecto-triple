@@ -18,8 +18,7 @@ INCLUDE ../globals.ink
 
 ===main3===
 #speaker: Tanic #portrait: 1
-Aún no tienes suficiente dinero (necesitas 15000 monedas)
-~ recursosprueba2 = "false"
+Aún no tienes suficiente dinero (necesitas 3000 monedas y 5 suministros)
 ->DONE
 
 ===main4===

@@ -63,12 +63,14 @@ public class Globales : MonoBehaviour
     public static string cinematicavista = "true";
     public static string parafinal = "true";
     public static string checkRecursosSelva="true";
+    public static string checkRecursosCiudad="true";
     //public static string partir="";
     //public static string partir="";
 
     //historio
     public static bool tiendaCinematica=true;
     public static bool clinicareparada=false;
+    public static bool ciudadreparada=false;
     public static string estaTanic = "true";
     public static string hielofinal = "true";
     public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
