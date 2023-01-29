@@ -49,10 +49,10 @@ public class Globales : MonoBehaviour
     public static bool Desierto=false;
 
     //recursos
-    public static int madera=10;
-    public static int suministros=10;
-    public static int vacunas=10;
-    public static int tiritas=10;
+    public static int madera=4;
+    public static int suministros=2;
+    public static int vacunas=2;
+    public static int tiritas=2;
 
     //ink
     public static string partir="true";
