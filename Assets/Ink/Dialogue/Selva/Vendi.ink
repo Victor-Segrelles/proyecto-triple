@@ -14,17 +14,19 @@ No tienes suficientes recursos (7 madera, 2 suministros y 1 medicina), ven cuand
 ===elegir2==
 {cinematicavista:
 - "true": ->main2
-- else: -> main5
+- else: -> main3
 }
 
 ===main2===
-{parahielo:
-- "true": ->main3
-- else: ->main4
-}
+~ minijuego = "VendiCinematica"
+->DONE
+
 
 ===main3===
-~ minijuego = "VendiCinematica"
+{parahielo:
+- "true": ->main5
+- else: ->main4
+}
 ->DONE
 
 ===main4===
