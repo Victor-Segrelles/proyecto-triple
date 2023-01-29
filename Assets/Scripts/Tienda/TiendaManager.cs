@@ -10,10 +10,10 @@ public class TiendaManager : MonoBehaviour
     private int vacunas=0;
     private int tiritas=0;
     private int suministros=0;
-    private int pveMadera=(int)(60*Globales.ECONOMIA);
-    private int pveVacuna=(int)(950*Globales.ECONOMIA);
-    private int pveTirita=(int)(180*Globales.ECONOMIA);
-    private int pveSuministro=(int)(350*Globales.ECONOMIA);
+    private int pveMadera=(int)(60/Globales.ECONOMIA);
+    private int pveVacuna=(int)(950/Globales.ECONOMIA);
+    private int pveTirita=(int)(180/Globales.ECONOMIA);
+    private int pveSuministro=(int)(350/Globales.ECONOMIA);
     [SerializeField]
     private TextMeshProUGUI maderaText;
     [SerializeField]
