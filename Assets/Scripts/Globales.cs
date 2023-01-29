@@ -10,11 +10,11 @@ public class Globales : MonoBehaviour
 
 
     //multiplicadores
-    //reduce costes en materiales
+    //reduce costes en tienda materiales
     public static float ECONOMIA=1;
     //mejora resultados (dando mas prestigio)
     public static float REPUTACION=1;
-    //mejora resultados (en general) y reduce gastos de materiales
+    //mejora resultados (en general)
     public static float EFICIENCIA=1;
 
 
@@ -48,10 +48,10 @@ public class Globales : MonoBehaviour
     public static bool Desierto=false;
 
     //recursos
-    public static int madera=0;
-    public static int suministros=0;
-    public static int vacunas=0;
-    public static int tiritas=0;
+    public static int madera=10;
+    public static int suministros=10;
+    public static int vacunas=10;
+    public static int tiritas=10;
 
     //ink
     public static string partir="true";
@@ -61,11 +61,13 @@ public class Globales : MonoBehaviour
     public static string parahielo = "true";
     public static string cinematicavista = "true";
     public static string parafinal = "true";
+    public static string checkRecursosSelva="true";
     //public static string partir="";
     //public static string partir="";
 
     //historio
     public static bool tiendaCinematica=true;
+    public static bool clinicareparada=false;
     public static string estaTanic = "estaTanic";
     public static Dictionary<string, bool> diccionario = new Dictionary<string, bool>();
     //public static bool encuentroTanic=true;

@@ -8,8 +8,7 @@ INCLUDE ../globals.ink
 }
 ===main===
 #speaker: Vendi #portrait: 7
-No tienes suficientes recursos, ven cuando los tengas.
-~recursosprueba = "false"
+No tienes suficientes recursos (7 madera, 2 suministros y 1 medicina), ven cuando los tengas.
 ->DONE
 
 ===main2===

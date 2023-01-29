@@ -31,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         } else {
             moving=false;
         }
+        Debug.Log(Globales.checkRecursosSelva);
+        Debug.Log(DialogueManager.GetInstance().GetUniversal("recursosprueba"));
     }
     void FixedUpdate(){
 

@@ -36,8 +36,11 @@ public class CuresPointsTime : MonoBehaviour
             initialTime += Time.deltaTime;
         }
 
-        if (showTime == 0)
+        if (showTime == 0){
+            Globales.DINERO+=(int)(scoreNum*100*Globales.EFICIENCIA);
+            Globales.PRESTIGE+=scoreNum*5;
             SceneManager.LoadScene("Selva"); //Game Over como ejemplo, se cambiará a la escena correspondiente
+        }
     }
 
     public void ShowScore()

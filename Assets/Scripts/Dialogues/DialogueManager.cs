@@ -76,6 +76,7 @@ public class DialogueManager : MonoBehaviour
         SetVariable("parahielo", Globales.parahielo);
         SetVariable("parafinal", Globales.parafinal);
         SetVariable("cinematicavista", Globales.cinematicavista);
+        SetVariable("recursosprueba", Globales.checkRecursosSelva);
     }
     public static DialogueManager GetInstance()
     {
