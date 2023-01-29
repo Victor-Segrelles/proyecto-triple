@@ -72,9 +72,9 @@ public class Cinematicas : MonoBehaviour
                 case "parafinal":
                     Globales.parafinal = "false";
                         break;
-                    case "estaTanic":
-                        Globales.estaTanic = "false";
-                    break;
+                case "estaTanic":
+                    Globales.estaTanic = "false";
+                break;
                     default:
                     // code block
                     break;
