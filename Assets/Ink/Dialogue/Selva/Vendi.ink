@@ -4,12 +4,18 @@ INCLUDE ../globals.ink
 ===elegir===
 {recursosprueba:
 - "true": ->main
-- else: ->main2
+- else: ->elegir2
 }
 ===main===
 #speaker: Vendi #portrait: 7
 No tienes suficientes recursos (7 madera, 2 suministros y 1 medicina), ven cuando los tengas.
 ->DONE
+
+===elegir2==
+{cinematicavista:
+- "true": ->main2
+- else: -> main5
+}
 
 ===main2===
 {parahielo:
@@ -23,4 +29,9 @@ No tienes suficientes recursos (7 madera, 2 suministros y 1 medicina), ven cuand
 
 ===main4===
 ~ minijuego = "SelvaCinematica"
+->DONE
+
+===main5===
+#speaker: Vendi #portrait: 7
+Gracias por ayudarme a arreglar el laboratorio.
 ->END
